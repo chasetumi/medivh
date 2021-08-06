@@ -1,0 +1,35 @@
+{
+    "name": "i笔趣阁",
+    "url": "www.ibiquge.net",
+    "version": 100,
+    "search": {
+        "url": "https://www.ibiquge.net/search.html?name=${key}",
+        "charset": "utf-8",
+        "list": "div.novelslist2 > ul > li",
+        "name": ".s2.wid > a",
+        "author": ".s4.wid > a",
+        "cover": "",
+        "summary": "",
+        "detail": ".s2.wid > a"
+    },
+    "detail": {
+        "name": "meta[property=og:book_name]@attr->content",
+        "author": "meta[property=og:novel:author]@attr->content",
+        "cover": "meta[property=og:image]@attr->content",
+        "summary": "#intro",
+        "status": "",
+        "update": "#info > p:nth-child(4)",
+        "lastChapter": "#info > p:nth-child(5) > a",
+        "catalog": ""
+    },
+    "catalog": {
+        "list": "#list > dl > dd",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content",
+        "filter": ["@p","@a"],
+        "purify": ["报送后维护人员会在两分钟内校正章节内容,请耐心等待。"]
+    }
+}

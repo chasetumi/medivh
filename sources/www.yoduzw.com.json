@@ -1,0 +1,39 @@
+{
+    "name": "有度中文网",
+    "url": "www.yoduzw.com",
+    "version": 104,
+    "search": {
+        "url": "https://www.yoduzw.com/s@post->searchkey=${key}&&searchtype=all",
+        "list": "li#hism",
+        "name": "h3 > a",
+        "author": "em > span:nth-child(4)",
+        "cover": "a > img@attr->_src",
+        "detail": "h3 > a"
+    },
+    "detail": {
+        "name": "meta[property=og:novel:book_name]@attr->content",
+        "author": "meta[property=og:novel:author]@attr->content",
+        "cover": "meta[property=og:image]@attr->content",
+        "summary": "meta[property=og:description]@attr->content",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ""
+    },
+    "catalog": {
+        "list": "#chapterList > li",
+        "orderBy": 0,
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#TextContent",
+        "filter": [
+            "@center:contains(本章未完)"
+        ],
+        "page": "#readbg > p > a:nth-child(5)@attr->href@match->(.+)(?=_)(.+)",
+        "purify": [
+            "（本章未完）"
+        ]
+    }
+}

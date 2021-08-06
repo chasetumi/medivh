@@ -1,0 +1,33 @@
+{
+    "name": "悠文阁",
+    "url": "www.youkong.org",
+    "version": 100,
+    "search": {
+        "url": "https://www.youkong.org/check.php@post->keyword=${key}",
+		"charset": "gbk",
+        "list": "ul.search-list > li",
+        "name": "h3 > a",
+        "author": "p.author@replace->作者：->",
+        "cover": "img",
+		"summary": "p.intro@replace->作品简介： ->",
+        "detail": "a"
+    },
+    "detail": {
+        "name": "meta[property=og:novel:book_name]@attr->content",
+        "author": "meta[property=og:novel:author]@attr->content",
+        "cover": "meta[property=og:image]@attr->content",
+        "summary": "meta[property=og:description]@attr->content",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ".catalogbtn"
+    },
+    "catalog": {
+        "list": "ul.clearfix > li > span",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#BookText"
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "name": "斋书苑",
+    "url": "www.zhaishuyuan.com",
+    "version": 106,
+    "search": {
+        "url": "https://www.zhaishuyuan.com/search/@post->key=${key}",
+        "charset": "gbk",
+        "list": "#sitembox > dl",
+        "name": "dd:nth-child(2) > h3 > a",
+        "author": "dd:nth-child(3) > span:nth-child(1)",
+        "cover": "dt > a > img",
+        "summary": ".book_des",
+        "detail": "dt > a"
+    },
+    "detail": {
+        "name": "meta[property=og:novel:book_name]@attr->content",
+        "author": "meta[property=og:novel:author]@attr->content",
+        "cover": "meta[property=og:image]@attr->content",
+        "summary": "#bookintro > p",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ".motion > a:nth-child(1)@attr->href@replace->www.zhaishuyuan->m.zhaishuyuan"
+    },
+    "catalog": {
+        "list": ".newlist > ul > li",
+        "name": "a",
+        "chapter": "a",
+        "page": ".jump-list > a.pg-next@attr->data-url"
+    },
+    "chapter": {
+        "content": "#DouPoCangZ > p"
+    }
+}

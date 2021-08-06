@@ -1,0 +1,33 @@
+{
+    "name": "vip小说网",
+    "url": "www.vipxs.cc",
+    "version": 100,
+    "search": {
+        "url": "http://www.vipxs.cc/modules/article/search.php@post->searchkey=${key}",
+        "charset": "gbk",
+        "list": "#content > table > tbody > tr:nth-child(n+2)",
+        "name": "td:nth-child(1) > a",
+        "cover":"",
+        "author": "td:nth-child(3)",
+        "detail":"td:nth-child(1) > a",
+        "summary": ""
+    },
+    "detail": {
+        "cover":"",
+        "author":"div.detail.fl > ul > li:nth-child(1) > p",
+        "status":"div.detail.fl > ul > li:nth-child(4) > p",
+        "update": "div.detail.fl > ul > li:nth-child(5) > p",
+        "lastChapter": "div.detail.fl > p > a",
+        "summary":"#content > div > div > div.playlist.sec > div.mlist",
+        "catalog": "div > a.read.blue"
+        },
+    "catalog": {
+        "list": "ol > li",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#inner",
+        "purify": []
+    }
+}

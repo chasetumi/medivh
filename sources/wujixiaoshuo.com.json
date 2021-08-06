@@ -1,0 +1,22 @@
+{
+    "name": "无极小说",
+    "url": "wujixiaoshuo.com",
+    "version": 100,
+    "search": {
+        "url": "http://ajnnan.com/search.html?name=${key}",
+        "list": ".novelslist2 > ul > li:gt(0)",
+        "name": "a",
+        "detail": "a"
+    },
+    "detail": {
+    },
+    "catalog": {
+        "list": "dd",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content",
+        "filter": ["@p", "@div"]
+    }
+}

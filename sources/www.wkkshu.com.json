@@ -1,0 +1,32 @@
+{
+    "name": "悟空看书 [飞卢]",
+    "url": "www.wkkshu.com",
+    "version": 102,
+    "search": {
+        "url": "https://www.wkkshu.com/modules/article/search.php?action=login&searchkey=${key}",
+        "charset": "gbk",
+        "list": ".toplist > ul > li",
+        "name": ".s1",
+        "author": ".s3",
+        "detail": ".s1 > a"
+    },
+    "detail": {
+        "name": "meta[property=og:novel:book_name]@attr->content",
+        "author": "meta[property=og:novel:author]@attr->content",
+        "cover": ".pic > img",
+        "summary": ".bookinfo_intro",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ""
+    },
+    "catalog": {
+        "list": ".book_list > ul > li",
+        "orderBy": 0,
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#htmlContent"
+    }
+}

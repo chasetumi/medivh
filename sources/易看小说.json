@@ -1,0 +1,33 @@
+{
+    "name": "易看小说",
+    "url": "m.yikanxiaoshuoa.com",
+    "version": 101,
+    "search": {
+        "url": "https://m.yikanxiaoshuoa.com/book/search.html?q=${key}",
+		"charset": "gbk",
+        "list": ".searchcon > ul:nth-child(n+2)",
+        "name": "li:nth-child(1) > h3 > a",
+        "author": "li:nth-child(2)",
+        "cover": "",
+        "detail": "li:nth-child(1) > h3 > a@attr->href@replace->m.yikanxiaoshuoa.com/book->www.yikanxiaoshuoa.com/0"
+    },
+    "detail": {
+        "name": "meta[property=og:novel:book_name]@attr->content",
+        "author": "meta[property=og:novel:author]@attr->content",
+        "cover": "meta[property=og:image]@attr->content",
+        "summary": "#intro > p",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "div.box_con:nth-child(7)>#list>ul.chapters>li:nth-child(1)",
+        "catalog": ""
+    },
+    "catalog": {
+        "list": "#wrapper > div:nth-child(8) > #list > .chapters > li",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content",
+        "filter": ["@a"]
+    }
+}

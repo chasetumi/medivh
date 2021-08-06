@@ -1,0 +1,54 @@
+{
+  "name": "小説を読もう！",
+  "url": "yomou.syosetu.com",
+  "version": 100,
+  "search": {
+      "url": "https://yomou.syosetu.com/search.php?word=${key}",
+      "charset": "utf-8",
+      "list": ".searchkekka_box",
+      "name": ".novel_h > a",
+      "author": ".searchkekka_box > a:nth-child(1) ",
+      "detail": ".novel_h > a"
+  },
+  "detail": {
+    "name": ".novel_title",
+    "author": ".novel_writername@match->(?<=作者: )(.+)(?= /)@replace->作者: ",
+    "summary": "#novel_ex",
+    "lastChapter": ".index_box > .novel_sublist2:last-child > .subtitle > a"
+  },
+  "catalog": {
+      "list": ".novel_sublist2",
+      "orderBy": 0,
+      "name": ".novel_sublist2 .subtitle a",
+      "chapter": ".novel_sublist2 .subtitle a"
+  },
+  "chapter": {
+      "content": ".novel_view"
+  },
+  "rank": [
+      {
+          "title": "総合ランキング",
+          "url": "https://yomou.syosetu.com/rank/list/type/${key}/",
+          "page": 1,
+          "size": 300,
+          "categories": [{"key": "daily_total", "value": "日間ランキングBEST300"}, {"key": "weekly_total", "value": "週間ランキングBEST300"}, {"key": "monthly_total", "value": "月間ランキングBEST300"}, {"key": "quarter_total", "value": "四半期ランキングBEST300"}, {"key": "yearly_total", "value": "年間ランキングBEST300"}, {"key": "total_total", "value": "累計ランキングBEST300"}],
+          "list": ".ranking_list",
+          "name": ".rank_h > a",
+          "author": ".rank_table .h_info a:nth-child(2)",
+          "summary": ".rank_table .ex",
+          "detail": ".rank_h > a"
+      },
+      {
+        "title": "ジャンル別ランキング",
+        "url": "https://yomou.syosetu.com/rank/genrelist/type/${key}/",
+        "page": 1,
+        "size": 100,
+        "categories": [{"key": "yearly_101", "value": "異世界"}, {"key": "yearly_102", "value": "現実世界"}, {"key": "yearly_201", "value": "ハイファンタジー"}, {"key": "yearly_202", "value": "ローファンタジー"}, {"key": "yearly_301","value": "純文学"}, {"key": "yearly_302", "value": "ヒューマンドラマ"}, {"key": "yearly_303", "value": "歴史"}, {"key": "yearly_304", "value": "推理"}, {"key": "yearly_305", "value": "ホラー"},{"key": "yearly_306", "value": "アクション"}, {"key": "yearly_307", "value": "コメディー"}, {"key": "yearly_401", "value": "VRゲーム"}, {"key": "yearly_402", "value": "宇宙"}, {"key": "yearly_403", "value": "空想科学"}, {"key": "yearly_404", "value": "パニック"}, {"key": "yearly_9901", "value": "童話"}, {"key": "yearly_9902", "value": "詩"}, {"key": "yearly_9903", "value": "エッセイ"}, {"key": "yearly_9999", "value": "その他"}],
+        "list": ".ranking_list",
+        "name": ".rank_h > a",
+        "author": ".rank_table .h_info a:nth-child(2)",
+        "summary": ".rank_table .ex",
+        "detail": ".rank_h > a"
+      }
+  ]
+}

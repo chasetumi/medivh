@@ -1,0 +1,27 @@
+{
+    "name": "爱阅读",
+    "url": "m.loveyuedu.com",
+    "version": 101,
+    "search": {
+        "url": "https://m.loveyuedu.com/s.php@post->type=articlename&s=${key}",
+        "charset": "gbk",
+        "list": "div.search_box>p.search_list",
+        "name": "a:nth-child(1)",
+        "author": "a:nth-child(3)",
+        "detail": "a:nth-child(1)@attr->href"
+    },
+    "detail": {
+        "name": "div.catalog1 > h1",
+        "author": "div.tab > p.p1@replace->作者：->",
+        "cover": "div.catalog1 > div.tu > img@attr->src"
+    },
+    "catalog": {
+        "list": "div.info_chapters > ul:nth-child(5)>li",
+        "name": "a",
+        "chapter": "a@attr->href",
+        "page": "div > span.right > a@attr->href"
+    },
+    "chapter": {
+        "content": "#novelcontent"
+    }
+}

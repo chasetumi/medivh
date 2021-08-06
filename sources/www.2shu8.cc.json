@@ -1,0 +1,28 @@
+{
+    "name": "爱书吧",
+    "url": "www.2shu8.cc",
+    "version": 100,
+    "search": {
+        "url": "https://www.2shu8.cc/s_${key}",
+        "charset": "UTF-8",
+        "list": ".lists>ul:nth-child(n+3)",
+        "name": ".tag2>a",
+        "author": ".tag4>a",
+        "detail":".tag2>a"
+    },
+    "detail": {
+        "cover":".catalog>img",
+        "auther":"div:nth-child(3)>span:nth-child(1)>a",
+        "update": "div:nth-child(3)>span:nth-child(2)@match->(?<=（)(.+)(?=）)",
+        "lastChapter": "div:nth-child(3)>span:nth-child(2)>a",
+        "summary":".catalog>p@match->(?=简介：).+"
+        },
+    "catalog": {
+        "list": ".catalogs>li",
+        "name": "li>a",
+        "chapter": "li>a"
+    },
+    "chapter": {
+        "content": "#content"
+    }
+}

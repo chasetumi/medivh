@@ -1,0 +1,22 @@
+{
+    "name": "云中书库",
+    "url": "yunxs.com",
+    "version": 100,
+    "search": {
+        "url": "http://www.yunxs.com/plus/search.php?kwtype=0&searchtype=&q=${key}",
+        "list": "li",
+        "name": "a",
+        "detail": "a"
+    },
+    "detail": {
+    },
+    "catalog": {
+        "list": ".list_box > ul > li",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": ".box_box",
+        "filter": ["@div"]
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "name": "9527小说网",
+    "url": "www.257xs.com",
+    "version": 100,
+    "search": {
+        "url": "https://www.257xs.com/so/search.html?searchkey=${key}",
+		"charset": "utf-8",
+        "list": ".library>li",
+        "name": ".bookname",
+        "author": "p:nth-child(4) > a.author",
+		"summary": "p.intro",
+        "cover": ".bookimg>img",
+        "detail": ".bookname"
+    },
+    "detail": {
+        "name": "meta[property=og:novel:book_name]@attr->content",
+        "author": "meta[property=og:novel:author]@attr->content",
+        "cover": "meta[property=og:image]@attr->content",
+        "summary": "div.detail > div > p.intro",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": "p.action > a:nth-child(4)@attr->href@replace->www.257xs->m.257xs"
+    },
+    "catalog": {
+        "list": ".novel-text-list > li",
+        "name": "a@attr->title",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content"
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "name": "UC书盟",
+    "url": "www.uctxt.com",
+    "version": 100,
+    "search": {
+        "url": "http://www.uctxt.com/modules/article/search.php?searchkey=${key}",
+        "charset": "gbk",
+        "list": ".list-lastupdate>ul>li",
+        "name": ".name>a",
+        "detail":".name>a"
+    },
+    "detail": {
+        "name":".l>h1",
+        "auther":".l>em@match->(?<=作者：).+",
+        "status":".r>i:nth-child(1)",
+        "update": ".r>i:nth-child(3)",
+        "lastChapter": ".l:nth-child(1)>a",
+        "summary":".intro@match->(?<=内容简介：).+"
+        },
+    "catalog": {
+        "list": "dl>dd",
+        "name": "dd",
+        "chapter": "dd>a"
+    },
+    "chapter": {
+        "content": "#content"
+    }
+}

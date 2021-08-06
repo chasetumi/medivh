@@ -1,0 +1,33 @@
+{
+    "name": "乐文小说网",
+    "url": "www.lwxsw.cc",
+    "version": 101,
+    "search": {
+        "url": "http://www.lwxsw.cc/modules/article/search.php?searchkey=${key}",
+        "charset": "gbk",
+        "list": ".table>tbody>tr:nth-child(n+2)",
+        "name": ".odd>a",
+        "author": ".odd:nth-child(3)",
+        "detail":".odd>a"
+    },
+    "detail": {
+        "cover":".row>div>img",
+        "status": ".booktag>.blue:nth-child(5)",
+        "author":".booktag>.red:nth-child(1)",
+        "update": ".hidden-xs:nth-child(2)@match->(?<=（)(.+)(?=）)",
+        "lastChapter": ".col-md-10>p:nth-child(3)@match->(?<=最新章节：)(.+)(?=（)",
+        "summary":"p.text-muted@match->(?<=展开 ).+"
+        },
+    "catalog": {
+        "list": "#list-chapterAll>dl",
+        "booklet": {
+            "name": "#list-chapterAll>dl>dt",
+            "list": "dl>dd>a"
+        },
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#htmlContent"
+    }
+}

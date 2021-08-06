@@ -1,0 +1,31 @@
+{
+    "name": "一品小说网",
+    "url": "www.1pxs.com",
+    "version": 100,
+    "search": {
+        "url": "http://www.1pxs.com/modules/article/search.php?ie=gbk&searchkey=${key}&ct=2097152",
+        "charset": "gbk",
+        "list": "tbody > tr:nth-child(n+2)",
+        "name": "td:nth-child(1) > a",
+        "author": "td:nth-child(3)",
+        "detail":"td:nth-child(1) > a"
+    },
+    "detail": {
+        "name":"div > div.info > h1 > a",
+        "cover":"div.con_limg > img",
+        "status":"",
+        "author":"div.info > p > a",
+        "update": "div.info > div.lastrecord@match->(?<=\\()(.+)(?=\\))",
+        "lastChapter": "#newchapter",
+        "summary":"div.info > div.r_cons",
+        "catalog":"#diralinks"
+        },
+    "catalog": {
+        "list": "dl>dd",
+        "name": "dd>a",
+        "chapter": "dd>a"
+    },
+    "chapter": {
+        "content": "#content"
+    }
+}

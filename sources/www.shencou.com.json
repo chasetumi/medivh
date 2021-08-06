@@ -1,0 +1,83 @@
+{
+    "name": "神凑轻小说",
+    "url": "www.shencou.com",
+    "version": 104,
+    "search": {
+        "url": "http://www.shencou.com/modules/article/search.php@post->searchtype=articlename+selected&searchkey=${key}&t_btnsearch=%CB%D1%CB%F7",
+        "charset": "gb2312",
+        "list": "div.main > div#centerm > div#content > table.grid > tbody > tr:gt(0)",
+        "name": "td:nth-child(1) > a",
+        "author": "td:nth-child(3)",
+        "detail": "td:nth-child(1) > a"
+    },
+    "detail": {
+        "name": "td:nth-child(1) > span > a@match->(.+)(?=小说)",
+        "author": "td > table > tbody > tr:nth-child(2) > td:nth-child(2)@replace->小说作者：",
+        "cover": "td:nth-child(2) > a:nth-child(1) > img",
+        "summary": "tr:nth-child(3) > td > table > tbody > tr > td:nth-child(2)",
+        "status": "tr:nth-child(3) > td:nth-child(2)@match->(?<=进度：)(.+)",
+        "update": "tr:nth-child(3) > td:nth-child(1)@match->(?<=更新：)(.+)",
+        "lastChapter": "tr > td:nth-child(2) > a:nth-child(3)",
+        "catalog": "td:nth-child(1) > ul > li:nth-child(1) > a"
+    },
+    "catalog": {
+        "list": ".zjbox",
+        "orderBy": 0,
+        "booklet": {
+            "name": ".tt > .ttname > h2",
+            "list": ".zjlist4 > ol > li"
+        },
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "body",
+        "filter": [
+            "@div",
+            "@h1",
+            "@center"
+        ]
+    },
+    "rank": [
+        {
+            "title":"排行榜",
+            "url": "http://www.shencou.com/modules/article/toplist.php?sort=${key}&page=${page}",
+            "page": 1,
+            "size": 14,
+            "categories": [
+                {"key": "allvisit", "value": "总排行榜"}, {"key": "monthvisit", "value": "月排行榜"},
+                {"key": "weekvisit", "value": "周排行榜"},
+                {"key": "allvote", "value": "总推荐榜"}, {"key": "monthvote", "value": "月推荐榜"},
+                {"key": "weekvote", "value": "周推荐榜"},
+                {"key": "postdate", "value": "最新入库"}, {"key": "lastupdate", "value": "最近更新"},
+                {"key": "authorupdate", "value": "原创更新"}, {"key": "masterupdate", "value": "装载更新"}, 
+                {"key": "goodnum", "value": "总收藏榜"}, {"key": "size", "value": "字数排行"}
+            ],
+            "list": "td > div",
+            "name": "div:nth-child(2) > b",
+            "author": "div:nth-child(2) > p@match->(?<=作者：)(.+)(?= ·)",
+            "cover": "div:nth-child(1) > a > img",
+            "summary": "",
+            "detail": "div:nth-child(1) > a"
+        },
+        {
+            "title":"文库分类",
+            "url": "http://www.shencou.com/modules/article/articlelist.php?class=${key}&page=${page}",
+            "page": 1,
+            "size": 14,
+            "categories": [
+                {"key": "1", "value": "电击·文库"}, {"key": "2", "value": "富士·见库"},
+                {"key": "3", "value": "角川·文库"}, {"key": "4", "value": "MFJ·文库"}, 
+                {"key": "5", "value": "FAMI·通文"}, {"key": "6", "value": "G A·文库"}, 
+                {"key": "7", "value": "H J·文库"}, {"key": "8", "value": "壹迅·文库"},
+                {"key": "9", "value": "集英·文库"}, {"key": "12", "value": "讲坛·社库"}
+            ],
+            "list": "td > div",
+            "name": "div:nth-child(2) > b",
+            "author": "div:nth-child(2) > p@match->(?<=作者：)(.+)(?= ·)",
+            "cover": "div:nth-child(1) > a > img",
+            "summary": "",
+            "detail": "div:nth-child(1) > a"
+        }
+    ]
+}

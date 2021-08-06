@@ -1,0 +1,27 @@
+{
+    "name": "都来读",
+    "url": "www.dldxs.cc",
+    "version": 101,
+    "search": {
+        "url": "https://so.biqusoso.com/s.php@post->ie=gbk&siteid=doulaidu8.cc&s=913578746670486665&q=${key}",
+        "charset": "gbk",
+        "list": "ul>li:gt(0)",
+        "name": "span.s2",
+        "author": "span.s4",
+        "detail": "span.s2>a@attr->href@replace->http://www.doulaidu8.cc/book/goto/id/->https://www.dldxs.cc/xs/"
+    },
+    "detail": {
+        "name": "div.catalog1 > h1",
+        "author": "div.tab > p.p1@replace->作者：->",
+        "cover": "div.catalog1 > div.tu > img@attr->src"
+    },
+    "catalog": {
+        "list": "div.listmain > dl > dd",
+        "name": "a",
+        "chapter": "a@attr->href"
+    },
+    "chapter": {
+        "content": "#content",
+        "purify": ["请记住本书首发域名：www.dldxs.cc。都来读手机版阅读网址：m.dldxs.cc","https://www.dldxs.cc/xs/[0-9]*/[0-9]*.html"]
+    }
+}

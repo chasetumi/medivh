@@ -1,0 +1,30 @@
+{
+    "name": "元尊小说",
+    "url": "www.yuanzun.tw",
+    "version": 100,
+    "search": {
+        "url": "http://www.yuanzun.tw/modules/article/search.php?searchkey=${key}",
+        "charset": "gbk",
+        "list": ".table>tbody>tr:nth-child(n+2)",
+        "name": ".odd>a",
+        "author": ".odd:nth-child(3)",
+        "detail":".odd>a"
+    },
+    "detail": {
+        "name":".bookTitle",
+        "cover":".row>div>img",
+        "status":".booktag>.blue:nth-child(5)",
+        "author":".booktag>a:nth-child(1)",
+        "update": "p>span.hidden-xs@match->(?<=（)(.+)(?=）)",
+        "lastChapter": "p:nth-child(3)>a:nth-child(1)",
+        "summary":"#bookIntro"
+        },
+    "catalog": {
+        "list": "#list-chapterAll>dl>dd",
+        "name": "dd>a",
+        "chapter": "dd>a"
+    },
+    "chapter": {
+        "content": "#htmlContent"
+    }
+}

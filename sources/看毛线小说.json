@@ -1,0 +1,32 @@
+{
+    "name": "看毛线小说",
+    "url": "kanmaoxian.com",
+    "version": 100,
+    "search": {
+        "url": "https://kanmaoxian.com/modules/article/search.php?searchtype=articlename&searchkey=${key}",
+		"charset": "gbk",
+        "list": ".list_l > ul > li",
+        "name": ".title > h3 > a",
+        "author": ".title > span.author@replace->作者：->",
+        "cover": "a > img",
+        "detail": ".title > h3 > a"
+    },
+    "detail": {
+        "name": "meta[property=og:novel:book_name]@attr->content",
+        "author": "meta[property=og:novel:author]@attr->content",
+        "cover": "meta[property=og:image]@attr->content",
+        "summary": "meta[property=og:description]@attr->content",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ""
+    },
+    "catalog": {
+        "list": "section.ml_main > dl > dd",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": ".yd_text2"
+    }
+}

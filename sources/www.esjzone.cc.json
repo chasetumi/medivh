@@ -1,0 +1,151 @@
+{
+    "name": "ESJ",
+    "url": "www.esjzone.cc",
+    "version": 115,
+    "search": {
+        "url": "https://www.esjzone.cc/tags/${key}/",
+        "charset": "utf-8",
+        "list": "div.col-xl-9 > div.row>div.col-lg-3",
+        "name": " div > div > h5 > a",
+        "author": "div>div.card-body > div.card-author > a",
+        "summary": "",
+        "cover": "div>div>a>div>div>div@attr->data-src",
+        "detail": "div>a@attr->href"
+    },
+    "detail": {
+        "name": "div.col-md-9.book-detail > h2",
+        "author": "div.col-md-9.book-detail > ul > li:nth-child(2) > a",
+        "cover": "div.col-md-3 > div > a > img@attr->src",
+        "summary": "div.description",
+        "status": "",
+        "update": "div.col-md-9.book-detail > ul > li:eq(5)",
+        "lastChapter": "div[id=chapterList]>:last-child",
+        "catalog": ""
+    },
+    "catalog": {
+        "list": "div[id=chapterList]>a",
+        "name": "a",
+        "chapter": "a@attr->href"
+    },
+    "chapter": {
+        "content": "div.forum-content.mt-3,div[class =d_post_content j_d_post_content]"
+    },
+    "auth": {
+        "login": "https://www.esjzone.cc/login.html",
+        "cookie": "esjzone.cc",
+        "verify": "https://www.esjzone.cc/my/profile.html",
+        "logged": "div.offcanvas-wrapper > section > div > div.col-lg-8 > form > div.col-12 > div > a@equal->儲存更新"
+    },
+    "rank": [
+        {
+            "title": "日轻",
+            "page": 1,
+            "size": 20,
+            "url": "https://www.esjzone.cc/list/${page}.html"
+        },
+        {
+            "title": "原创",
+            "page": 1,
+            "size": 20,
+            "url": "https://www.esjzone.cc/list-21/${page}.html"
+        },
+        {
+            "title": "韩轻",
+            "page": 1,
+            "size": 20,
+            "url": "https://www.esjzone.cc/list-31/${page}.html"
+        },
+        {
+            "title": "分类",
+            "page": 1,
+            "size": 20,
+            "url": "https://www.esjzone.cc/tags/${key}/${page}.html",
+            "categories": [
+                {
+                    "key": "R15",
+                    "value": "R15"
+                },
+                {
+                    "key": "残酷描写",
+                    "value": "残酷描写"
+                },
+                {
+                    "key": "龙",
+                    "value": "龙"
+                },
+                {
+                    "key": "技能",
+                    "value": "技能"
+                },
+                {
+                    "key": "冒险",
+                    "value": "冒险"
+                },
+                {
+                    "key": "转生",
+                    "value": "转生"
+                },
+                {
+                    "key": "黑暗",
+                    "value": "黑暗"
+                },
+                {
+                    "key": "萝莉",
+                    "value": "萝莉"
+                },
+                {
+                    "key": "后宫",
+                    "value": "后宫"
+                },
+                {
+                    "key": "魔法",
+                    "value": "魔法"
+                },
+                {
+                    "key": "少女",
+                    "value": "少女"
+                },
+                {
+                    "key": "魔王",
+                    "value": "魔王"
+                },
+                {
+                    "key": "战争",
+                    "value": "战争"
+                },
+                {
+                    "key": "死亡",
+                    "value": "死亡"
+                },
+                {
+                    "key": "穿越",
+                    "value": "穿越"
+                },
+                {
+                    "key": "奴隶",
+                    "value": "奴隶"
+                },
+                {
+                    "key": "主角",
+                    "value": "主角"
+                },
+                {
+                    "key": "TS",
+                    "value": "TS"
+                },
+                {
+                    "key": "百合",
+                    "value": "百合"
+                },
+                {
+                    "key": "异世界",
+                    "value": "异世界"
+                },
+                {
+                    "key": "转生",
+                    "value": "转生"
+                }
+            ]
+        }
+    ]
+}

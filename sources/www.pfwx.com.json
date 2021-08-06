@@ -1,0 +1,27 @@
+{
+    "name": "平凡文学",
+    "url": "http://www.pfwx.com",
+    "version": 101,
+    "search": {
+        "url": "http://www.pfwx.com/modules/article/search.php?searchkey=${key}&searchtype=articlename",
+        "charset": "utf-8",
+        "list": ".tutui",
+        "name": "h2 > a",
+        "author": "h3@match->(?<=作者：).+",
+        "cover": ".tutuiImg > a > img",
+        "summary": "",
+        "detail": "h2 > a"
+    },
+    "detail": {
+        "catalog": ""
+    },
+    "catalog": {
+        "list": ".zhangjiekaishi > ul > li",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#booktext",
+        "purify": ["★★平凡文学★★.+请把本站网址推荐给您的朋友吧！"]
+    }
+}

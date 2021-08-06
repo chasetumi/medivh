@@ -1,0 +1,33 @@
+{
+    "name": "游人小说网",
+    "url": "www.yourenxsw.com",
+    "version": 101,
+    "search": {
+        "url": "https://www.yourenxsw.com/s.php?ie=gbk&q=${key}",
+		"charset": "gbk",
+        "list": ".type_show > div",
+        "name": "div > .bookinfo > h4 > a",
+        "author": "div > .bookinfo > div.author@replace->作者：->",
+        "cover": "div > .bookimg > a > img",
+        "detail": "div > .bookinfo > h4 > a"
+    },
+    "detail": {
+        "name": "meta[property=og:novel:book_name]@attr->content",
+        "author": "meta[property=og:novel:author]@attr->content",
+        "cover": "meta[property=og:image]@attr->content",
+        "summary": "#intro > p:nth-child(1)",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ""
+    },
+    "catalog": {
+        "list": ".listmain > dl > dd",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content",
+        "purify": ["天才一秒记住本站地址.+yourenxsw.com"]
+    }
+}

@@ -1,0 +1,77 @@
+{
+  "name": "カクヨム",
+  "url": "kakuyomu.jp",
+  "version": 100,
+  "search": {
+      "url": "https://kakuyomu.jp/search?q=${key}",
+      "charset": "utf-8",
+      "list": ".widget-work",
+      "name": ".bookWalker-work-title",
+      "author": ".widget-catchphrase-author-activityName",
+      "detail": ".bookWalker-work-title",
+      "summary": ".widget-workCard-introduction"
+  },
+  "detail": {
+    "name": "#workTitle",
+    "author": "#workAuthor-activityName",
+    "summary": "#catchphrase-body",
+    "cover": "#coverImage img"
+  },
+  "catalog": {
+      "list": ".widget-toc-episode",
+      "orderBy": 0,
+      "name": ".widget-toc-episode span",
+      "chapter": ".widget-toc-episode a"
+  },
+  "chapter": {
+      "content": ".widget-episode"
+  },
+  "rank": [
+      {
+          "title": "総合ランキング",
+          "url": "https://kakuyomu.jp/rankings/all/${key}?page=${page}",
+          "page": 1,
+          "size": 100,
+          "categories": [{"key": "daily", "value": "総合の日間ランキング"}, {"key": "weekly", "value": "総合の週間ランキング"}, {"key": "monthly", "value": "総合の月間ランキング"}, {"key": "yearly", "value": "総合の年間ランキング"}, {"key": "entire", "value": "総合の累計ランキング"}],
+          "list": ".widget-work",
+          "name": ".bookWalker-work-title",
+          "author": ".widget-catchphrase-author-activityName",
+          "detail": ".bookWalker-work-title",
+          "summary": ".widget-workCard-introduction"
+      },
+      {
+        "title": "ジャンル別ランキング",
+        "url": "https://kakuyomu.jp/rankings/${key}/entire?page=${page}",
+        "page": 1,
+        "size": 100,
+        "categories": [{"key": "fantasy", "value": "異世界ファンタジー"}, {"key": "action", "value": "現代ファンタジー"}, {"key": "sf", "value": "SF"}, {"key": "love_story", "value": "恋愛"}, {"key": "romance","value": "ラブコメ"}, {"key": "drama", "value": "現代ドラマ"}, {"key": "horror", "value": "ホラー"}, {"key": "mystery", "value": "ミステリー"}, {"key": "nonfiction", "value": "エッセイ・ノンフィクション"},{"key": "history", "value": "歴史・時代・伝奇"}, {"key": "criticism", "value": "創作論・評論"}, {"key": "others", "value": "詩・童話・その他"}],
+        "list": ".widget-work",
+        "name": ".bookWalker-work-title",
+        "author": ".widget-catchphrase-author-activityName",
+        "detail": ".bookWalker-work-title",
+        "summary": ".widget-workCard-introduction"
+      },
+      {
+        "title": "公式連載の新着",
+        "url": "https://kakuyomu.jp/official/recent_works?page=${page}",
+        "page": 1,
+        "size": 28,
+        "list": ".widget-workBox-official",
+        "name": ".widget-workBox-official-titleLabel",
+        "author": ".widget-workBox-official-author",
+        "cover": ".widget-workBox-official-thumbnail-coverImage img",
+        "detail": ".widget-workBox-official a",
+        "summary": ".widget-workBox-official-catchphrase"
+      },
+      {
+        "title": "公式連載",
+        "url": "https://kakuyomu.jp/users/${key}/works",
+        "categories": [{"key": "dengekibunko", "value": "電撃文庫"}, {"key": "mwbunko", "value": "メディアワークス文庫"}, {"key": "kadokawa_bunko", "value": "角川文庫"}, {"key": "mfbunkoj", "value": "MF文庫J編集部"}, {"key": "sneaker","value": "角川スニーカー文庫"}, {"key": "famitsu", "value": "ファミ通文庫"}, {"key": "bslog", "value": "ビーズログ文庫"}, {"key": "beans", "value": "角川ビーンズ文庫"}, {"key": "fantasia", "value": "ファンタジア文庫"},{"key": "dragon-novels", "value": "DRAGON NOVELS"}, {"key": "kadokawabooks", "value": "カドカワBOOKS公式"}, {"key": "lbunko", "value": "富士見L文庫"}, {"key": "hobby", "value": "エンターブレイン　ホビー書籍編集部"}, {"key": "prime-edi", "value": "｢L-エンタメ小説｣／プライム書籍編集部"}, {"key": "dragonbook", "value": "ドラゴンブック編集部"}, {"key": "bun_kado", "value": "文芸カドカワ"}],
+        "list": ".widget-work",
+        "name": ".bookWalker-work-title",
+        "author": ".widget-catchphrase-author-activityName",
+        "detail": ".bookWalker-work-title",
+        "summary": ".widget-workCard-introduction"
+      }
+  ]
+}

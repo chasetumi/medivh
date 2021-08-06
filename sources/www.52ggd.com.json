@@ -1,0 +1,30 @@
+{
+    "name": "格格党",
+    "url": "www.52ggd.com",
+    "version": 100,
+    "search": {
+        "url": "http://www.52ggd.com/modules/article/search.php?searchkey=${key}",
+        "charset": "gbk",
+        "list": "#content > div.inner > div.details >div",
+        "name": "div>h3",
+        "detail": "div>h3>a"
+    },
+    "detail": {
+        "cover": " #content > div:nth-child(1) > div > div.book-img > img",
+        "author": "div.book-info > div.book-title > em@match->(?<=作者：).+",
+        "update": " div.book-info > p.book-stats@match->(?<=更新时间：).+",
+        "name": " div.book-info > div.book-title > h1",
+        "status": " div.book-info > p.book-stats@match->(?<=状态：)(.+)(?=字数)",
+        "lastChapter": "div.details > ul > a",
+        "summary": " div.book-info > p.book-intro",
+        "catalog":"div.book-link > a:nth-child(2)"
+    },
+    "catalog": {
+        "list": "#main > div > dl > dd",
+        "name": "dd>a",
+        "chapter": "dd>a"
+    },
+    "chapter": {
+        "content": "#BookText"
+    }
+}

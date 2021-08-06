@@ -1,0 +1,31 @@
+{
+    "name": "热游文学网",
+    "url": "m.fahao.reyoo.net",
+    "version": 101,
+    "search": {
+        "url": "http://m.fahao.reyoo.net/wap.php?action=search@post->wd=${key}",
+		"charset": "utf-8",
+        "list": ".bd > ul > li",
+        "name": "div > a.name",
+        "detail": "div > a.name@attr->href@replace->m.fahao->fahao"
+    },
+    "detail": {
+        "name": "meta[property=og:novel:book_name]@attr->content",
+        "author": "meta[property=og:novel:author]@attr->content",
+        "cover": "meta[property=og:image]@attr->content",
+        "summary": ".words > p:nth-child(3)",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ""
+    },
+    "catalog": {
+        "list": ".list_box > ul > li",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": ".box_box",
+        "filter": ["@script"]
+    }
+}

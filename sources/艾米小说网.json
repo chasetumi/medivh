@@ -1,0 +1,33 @@
+{
+    "name": "艾米小说网",
+    "url": "www.amxs.cc",
+    "version": 100,
+    "search": {
+        "url": "https://www.amxs.cc/search/@post->searchkey${key}",
+		"charset": "utf-8",
+        "list": "#rankinglist > tbody > tr:nth-child(n+2)",
+        "name": "td:nth-child(1) > p > a",
+        "author": "td:nth-child(3) > p",
+        "cover": "",
+        "detail": "td:nth-child(1) > p > a"
+    },
+    "detail": {
+        "name": "meta[property=og:novel:book_name]@attr->content",
+        "author": "meta[property=og:novel:author]@attr->content",
+        "cover": "meta[property=og:image]@attr->content",
+        "summary": "meta[property=og:description]@attr->content",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ""
+    },
+    "catalog": {
+        "list": ".ml_list > ul > li",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#articlecontent > p",
+        "purify": ["本站域名：.+艾米小说网"]
+    }
+}

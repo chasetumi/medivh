@@ -1,0 +1,32 @@
+{
+    "name": "笔趣库",
+    "url": "www.bswtan.com",
+    "version": 101,
+    "search": {
+        "url": "http://www.bswtan.com/modules/article/search.php@post->searchkey=${key}",
+		"charset": "utf-8",
+        "list": "tbody>tr:nth-child(n+2)",
+        "name": "td:nth-child(1)>a",
+        "author": "td:nth-child(3)",
+        "cover": "",
+        "detail": "td:nth-child(1)>a"
+    },
+    "detail": {
+        "name": "meta[property=og:novel:book_name]@attr->content",
+        "author": "meta[property=og:novel:author]@attr->content",
+        "cover": "meta[property=og:image]@attr->content",
+        "summary": "#intro > p:nth-child(1)",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ""
+    },
+    "catalog": {
+        "list": "#list > dl > dd",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content"
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "name": "和图书",
+    "url": "www.hetushu.com",
+    "version": 100,
+    "search": {
+        "url": "https://www.hetushu.com/book/search.php?keyword=${key}",
+        "charset": "utf-8",
+        "list": ".list > dd",
+        "name": "dd > h4 > a",
+        "author": "dd > h4 > span@match->(?<=/ )(.+)(?= /)",
+        "cover": "dd > a > img",
+        "detail": "dd > a"
+    },
+    "detail": {
+        "name": ".book_info > h2",
+        "author": ".book_info > div:nth-child(3) > a",
+        "cover": ".book_info > img",
+        "summary": ".intro",
+        "status": "",
+        "update": "",
+        "lastChapter": "",
+        "catalog": ""
+    },
+    "catalog": {
+        "list": "#dir > dd",
+        "orderBy": 0,
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content",
+        "filter": [
+            "@h2"
+        ]
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "name": "平板电子书网",
+    "url": "www.qiqint.la",
+    "version": 100,
+    "search": {
+        "url": "http://www.qiqint.la/modules/article/search.php@post->searchkey=${key}",
+        "charset": "utf-8",
+        "list": "div.author_list > div",
+        "name": "div > h2 > a",
+        "cover":"a > img",
+        "author": "",
+        "summary": "",
+        "detail":"div > h2 > a"
+    },
+    "detail": {
+        "name":"div.title > h1",
+        "cover":"div.cover > img",
+        "author":"#author@match->(?<=作者：).+",
+        "status":"div.info > div.fullflag@match->(?<=状态：).+",
+        "summary":"div.info-text",
+        "update": "div.xiaoshuo > div.info > p@match->(?<=更新：).+",
+        "lastChapter": "div.new_chapter_list > h6 > a",
+        "catalog": "#read"
+        },
+    "catalog": {
+        "list": " dl > dd",
+        "orderBy":"0",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "div.content",
+        "purify": ["屏蔽规则"]
+    }
+}

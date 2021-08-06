@@ -1,0 +1,38 @@
+{
+    "name": "妙笔阁",
+    "url": "www.imiaobige.com",
+    "version": 100,
+    "search": {
+        "url": "http://www.imiaobige.com/search.html@post->searchkey=${key}",
+        "charset": "utf-8",
+        "list": "div[id=sitembox]>dl",
+        "name": "dd>h3>a",
+        "author": "dd[class=book_other]>a:nth-child(2)",
+        "cover": "dt>a>img@attr->src",
+        "summary": "dd[class=book_des]",
+        "detail": "dd>h3>a@attr->href"
+    },
+    "detail": {
+        "name": "meta[property=og:novel:book_name]@attr->content",
+        "author": "meta[property=og:novel:author]@attr->content",
+        "cover": "meta[property=og:image]@attr->content",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "catalog": "#newlist > div > strong > a@attr->href",
+        "summary": "meta[property=og:description]",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content"
+    },
+    "catalog": {
+        "list": "div[id=readerlists]>ul:gt(0)",
+        "booklet": {
+            "name": "h3",
+            "list": "li"
+        },
+        "name": "a",
+        "chapter": "a@attr->href"
+    },
+    "chapter": {
+        "content": "#content",
+        "purify": ["您可以在百度里搜索.*查找最新章节！"]
+    }
+}

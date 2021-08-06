@@ -1,0 +1,39 @@
+{
+    "name": "爱读小说 [飞卢]",
+    "url": "www.52dus.net",
+    "version": 103,
+    "search": {
+        "url": "https://www.52dus.net/home/search@post->action=search&q=${key}",
+        "list": ".bookbox",
+        "name": ".bookinfo > h4",
+        "author": ".bookinfo > div:nth-child(2) > a",
+        "cover": "mip-img > img",
+        "detail": ".bookinfo > h4 > a"
+    },
+    "detail": {
+        "name": "meta[property=og:novel:book_name]@attr->content",
+        "author": "meta[property=og:novel:author]@attr->content",
+        "cover": "meta[property=og:image]@attr->content",
+        "summary": ".bookintromore",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ""
+    },
+    "catalog": {
+        "list": ".fulllistall > mip-showmore > dd",
+        "orderBy": 0,
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#BookText",
+        "filter": [
+            "@p:contains(本章未完)"
+        ],
+        "page": ".content_btn > div:nth-child(3) > a:matches(下一页)",
+        "purify": [
+            "如UC阅读模式不显示图片章节。请退出阅读模式尝试。"
+        ]
+    }
+}

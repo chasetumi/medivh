@@ -1,0 +1,85 @@
+{
+
+    "name": "盛世阅读网",
+
+    "url": "www.s4yd.com",
+
+    "version": 101,
+
+    "search": {
+
+        "url": "http://www.s4yd.com/site/search?w=${key}",
+
+        "list": ".lists-cell",
+
+        "name": ".tit > p > a",
+
+        "author": ".author > a",
+
+        "cover": ".pic > a > img",
+
+        "summary": ".desc",
+
+        "detail": ".tit > p > a"        
+
+    },
+
+    "detail": {
+
+        "status": "li:nth-child(12)@match->(?<=连载状态：).+",
+
+        "lastChapter": ".tit > p > a",
+
+        "catalog": ".latest > div > a:nth-child(2)"
+
+    },
+
+    "catalog": {
+
+        "list": ".cell-items > ul > li",
+
+        "name": "a",
+
+        "chapter": "a"
+
+    },
+
+    "chapter": {
+
+        "content": "#content > p"
+
+    },
+
+    "rank": [
+
+        {
+
+            "title":"男频",
+
+            "url": "http://www.s4yd.com/book/index?channel=1&category=${key}&page=${page}",
+
+            "page": 1,
+
+            "categories": [{"key": "3", "value": "玄幻"},{"key": "4", "value": "奇幻"},{"key": "5", "value": "武侠"},{"key": "6", "value": "仙侠"},{"key": "7", "value": "都市"},{"key": "8", "value": "职场"},{"key": "9", "value": "历史"},{"key": "10", "value": "军事"},{"key": "11", "value": "游戏"},{"key": "12", "value": "竞技"},{"key": "13", "value": "科幻"}, {"key": "14", "value": "灵异"},{"key": "15", "value": "二次元"}],            
+
+            "list":".lists-box > div"
+
+        },
+
+        {
+
+            "title":"女频",
+
+            "url": "http://www.s4yd.com/book/index?channel=2&category=${key}&page=${page}",
+
+            "page": 1,
+
+            "categories": [{"key": "16", "value": "玄幻言情"},{"key": "17", "value": "仙侠奇缘"},{"key": "18", "value": "古代言情"},{"key": "19", "value": "现代言情"},{"key": "20", "value": "浪漫青春"},{"key": "21", "value": "悬疑灵异"},{"key": "22", "value": "科幻恋歌"},{"key": "23", "value": "游戏竞技"},{"key": "24", "value": "同人小说"}],            
+
+            "list":".lists-box > div"
+
+        }
+
+    ]
+
+}

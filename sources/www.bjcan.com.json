@@ -1,0 +1,31 @@
+{
+    "name": "笔尖小说网 [SF]",
+    "url": "www.bjcan.com",
+    "version": 101,
+    "search": {
+        "url": "http://www.bjcan.com/home/search/index.html?keyword=${key}",
+        "charset": "utf-8",
+        "list": "ul.clearfix > li",
+        "name": "h5 > a",
+        "author": "p.info > span:nth-child(1)",
+        "cover": "img",
+        "detail": "h5 > a"
+    },
+    "detail": {
+        "cover": "meta[property=og:image]@attr->content",
+        "summary": "meta[property=og:description]@attr->content",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ""
+    },
+    "catalog": {
+        "list": ".book-info > div:contains(章节列表) > ul > li",
+        "orderBy": 0,
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": ".read-content > p"
+    }
+}

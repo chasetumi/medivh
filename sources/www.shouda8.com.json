@@ -1,0 +1,39 @@
+{
+    "name": "手打吧",
+    "url": "www.shouda8.com",
+    "version": 103,
+    "search": {
+        "url": "https://www.shouda8.com/search.html@post->searchkey=${key}",
+        "charset": "UTF-8",
+        "list": "#alistbox",
+        "name": "h2 > a",
+        "author": ".title > span > a",
+        "cover": "img",
+        "summary": ".intro",
+        "detail": "a"
+    },
+    "detail": {
+        "name": "",
+        "author": "",
+        "cover": "",
+        "summary": "",
+        "status": ".top > span:nth-child(3)@match->(?<=小说状态：)(.+)",
+        "update": ".top > span:nth-child(4)@match->(?<=更新时间：)(.+)",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ""
+    },
+    "catalog": {
+        "list": ".link_14 > dl",
+        "orderBy": 0,
+        "booklet": {
+            "name": "dt > b",
+            "list": "dd"
+        },
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content",
+        "purify": ["爱看书吧|塔小说|电子书屋|五号小说网|宝来小说网|巴特尔小说|要读读小说网|19楼文学|7问小说|维昌小说网|读书楼|为尊书院|爱书屋|天平小说|微微小说吧|乐书吧|绝世唐门|网爱读书吧|爱心999小说|4E小说|妙书吧|127小说|第六书吧|奇书电子书|人人读小说网|姐姐文学网|一楼小说网|和顺小说|无忧文学网|110电子书|16k中文|一家万书楼|58读书|600小说|书吧达小说网|126中文网|33听书|六号小说|180小说|120小说|紫薇小说|最新小说|华夏书库|读读看小说|62小说|单身笔趣阁|书袋网|阅读书吧|2018小说|无忧爱书网|100文学|懒人听书|小桃中文|无忧文学网|51唯美小说|爱心999小说|搜狗书库|比比电子书|书荒啦书屋|搜读电子书|八一中文网|庙街小说|奇书网|第一抓机小说|3a阅读网|天天书吧|我爱小说网||好看小说|135中文|百花文学|看书窝|微书吧|77电子书|飞扬小说|天籁小说|天合小说网|亲亲小说|90文学网|乐文小说|趣诵小书|然文吧|61笔趣阁|哈哈文学网|一八小说|一八小说|第一中文网|博士小说网|17笔趣阁|天天小说|梦岛书库|三月中文|第五小说|九九中文|百度小说","(www).+?(.com|.net|.cn|.org|.info)","(笔趣阁).+?(.com)","(喜欢).+?(速度最快。)","(无错章节).+?(手打吧小说网！)"]
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "name": "玉米小说网",
+    "url": "https://m.yumitxt.com",
+    "version": 101,
+    "search": {
+        "url": "https://m.yumitxt.com/s.php@post->searchkey=${key}",
+        "charset": "UTF-8",
+        "list": ".topul > li",
+        "name": "h2",
+        "author": ".author",
+        "cover": ".top_img > img",
+        "summary": "",
+        "detail": "h2 > a"
+    },
+    "detail": {
+        "catalog": ""
+    },
+    "catalog": {
+        "list": ".chapters > ul > li",
+        "page": "a:matches(下一页)",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content",
+        "page": "a:matches(下一页)",
+        "purify":[""]
+    }
+}

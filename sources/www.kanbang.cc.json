@@ -1,0 +1,82 @@
+{
+    "name": "看帮网",
+    "url": "www.kanbang.cc",
+    "version": 100,
+    "search": {
+        "url": "https://www.kanbang.cc/plus/search.php@post->q=${key}&kwtype=0",
+        "charset": "utf-8",
+        "list": "ul.subject-list>li",
+        "name": ".info>h2>a",
+        "cover":".pic>a>img",
+        "author": ".info>.pub@match->(.+)(?= / )",
+        "summary": ".info>p",
+        "detail":".info>h2>a"
+    },
+    "detail": {
+        "name":"#content > h1",
+        "cover":"#mainpic > a > img",
+        "author":"#info > span:nth-child(1) > a",
+        "status":"完结",
+        "summary":"#content > div > div.article > div.related_info > div:nth-child(2) > span > div",
+        "catalog": "#info > div > a:nth-child(1)"
+        },
+    "catalog": {
+        "list": "#content > div > div:nth-child(2) > div.tagCol > ul > li",
+        "orderBy":"0",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content > div > div:nth-child(2) > div.tagCol > p",
+        "purify": []
+    },
+    "rank": [
+        {
+            "title":"最新小说",
+            "url": "https://www.kanbang.cc/a/new.html",
+            "list":"#content > div > div.article > div > div.list-wp > div > a",
+            "name":"p@match->(.+)(?= )",
+            "cover":" div > img",
+            "detail":"a"
+        },
+        {
+            "title":"男频小说",
+            "url": "https://www.kanbang.cc/male/${key}${page}.html",
+            "page":1,
+            "size":15,
+            "categories": [{"key": "xhxx/list_2_", "value": "玄幻仙侠"}, {"key": "dsgc/list_3_", "value": "都市官场"}, {"key": "khqh/list_4_", "value": "科幻奇幻"}, {"key": "kbtl/list_5_", "value": "恐怖推理"}, {"key": "dmtr/list_6_", "value": "动漫同人"}, {"key": "yxjj//list_7_", "value": "游戏竞技"}, {"key": "cyls/list_8_", "value": "穿越历史"}, {"key": "jszz//list_9_", "value": "军事战争"}],
+            "list":"#subject_list > ul > li",
+            "name":" div.info > h2 > a",
+            "author":"div.info > div.pub@match->.+(?= / )",
+            "cover":"div.pic > a > img",
+            "summary":"div.info > p",
+            "detail":" div.info > h2 > a"
+        },
+        {
+            "title":"女频小说",
+            "url": "https://www.kanbang.cc/female/${key}${page}.html",
+            "page":1,
+            "size":15,
+            "categories": [{"key": "xdyq/list_11_", "value": "现代言情"}, {"key": "gdyq/list_12_", "value": "古代言情"}, {"key": "xxmh//list_13_", "value": "仙侠魔幻"}, {"key": "dmbh/list_14_", "value": "耽美百合"}, {"key": "khkb/list_15_", "value": "科幻恐怖"}, {"key": "yltr/list_16_", "value": "娱乐同人"}],
+            "list":"#subject_list > ul > li",
+            "name":" div.info > h2 > a",
+            "author":"div.info > div.pub@match->.+(?= / )",
+            "cover":"div.pic > a > img",
+            "summary":"div.info > p",
+            "detail":" div.info > h2 > a"
+        },
+        {
+            "title":"实体图书",
+            "url": "https://www.kanbang.cc/book/${key}${page}.html",
+            "page":1,
+            "size":15,
+            "categories": [{"key": "gjwx/list_18_", "value": "古今文学"}, {"key": "jjgl/list_19_", "value": "经济管理（暂时没书）"}, {"key": "lzjy/list_20_", "value": "励志教育"}, {"key": "rwsk/list_21_", "value": "人文社科"}, {"key": "wgmz/list_22_", "value": "外国名著"}, {"key": "pzsh/list_23_", "value": "品质生活"}],
+            "list":"#subject_list > ul > li",
+            "name":" div.info > h2 > a",
+            "author":"div.info > div.pub@match->.+(?= / )",
+            "cover":"div.pic > a > img",
+            "summary":"div.info > p",
+            "detail":" div.info > h2 > a"
+        }
+    ]
+}

@@ -1,0 +1,425 @@
+{
+    "name": "红袖添香",
+    "url": "m.hongxiu.com",
+    "version": 102,
+    "search": {
+        "url": "https://m.hongxiu.com/search?kw=${key}",
+        "list": "#books-0 > li",
+        "name": "h4.book-title",
+        "author": "span.book-author",
+        "cover": "img@attr->data-src",
+        "summary": "p.book-desc",
+        "detail": "a@attr->href@replace->m.hongxiu->www.hongxiu"
+    },
+    "detail": {
+        "status": "span.tag > i:nth-child(1)",
+        "update": ".update > p > span",
+        "lastChapter": ".update > p > a@replace->更新至 ",
+        "catalog": "${url}#Catalog"
+    },
+    "catalog": {
+        "list": ".volume",
+        "booklet": {
+            "name": "h3@match->(.+)(?=·)",
+            "list": "ul > li"
+        },
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "div.read-content"
+    },
+    "auth": {
+        "login": "https://passport.yuewen.com/yuewen.html?appid=41&areaid=2&autotime=30&source=m&version=1.0&ticket=1&unionshow=110&returnurl=https%3A%2F%2Fm.hongxiu.com%2FloginSuccess%3FjumpUrl%3Dhttps%253A%252F%252Fm.hongxiu.com%252Fuser",
+        "cookie": "hongxiu.com",
+        "verify": "https://m.hongxiu.com/user",
+        "logged": "#logout@equal->退出登录",
+        "vip": "a.j_subscribeBtn > em@equal->订阅本章"
+    },
+    "rank": [
+        {
+            "title":"红袖风云榜",
+            "url": "https://www.hongxiu.com/rank/hxyuepiao?catId=${key}&pageNum=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [
+                {"key": "-1", "value": "全部"}, {"key": "30020", "value": "现代言情"}, {"key": "30013", "value": "古代言情"}, {"key": "30031", "value": "浪漫青春"}, {"key": "30001", "value": "玄幻言情"},
+                {"key": "30008", "value": "仙侠奇缘"}, {"key": "30036", "value": "悬疑"}, {"key": "30042", "value": "科幻空间"}, {"key": "30050", "value": "游戏竞技"}, {"key": "30083", "value": "短篇小说"}, {"key": "30055", "value": "轻小说"}
+            ],
+            "list": "#rank-view-list > div > ul > li",
+            "name": ".book-mid-info > h4 > a",
+            "author": "p.author > a.name",
+            "cover": ".book-img-box > a > img",
+            "summary": "p.intro",
+            "detail": ".book-img-box > a"
+        },
+        {
+            "title":"阅文风云榜",
+            "url": "https://www.hongxiu.com/rank/ywyuepiao?catId=${key}&pageNum=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [
+                {"key": "-1", "value": "全部"}, {"key": "30020", "value": "现代言情"}, {"key": "30013", "value": "古代言情"}, {"key": "30031", "value": "浪漫青春"}, {"key": "30001", "value": "玄幻言情"},
+                {"key": "30008", "value": "仙侠奇缘"}, {"key": "30036", "value": "悬疑"}, {"key": "30042", "value": "科幻空间"}, {"key": "30050", "value": "游戏竞技"}, {"key": "30083", "value": "短篇小说"}, {"key": "30055", "value": "轻小说"}
+            ],
+            "list": "#rank-view-list > div > ul > li",
+            "name": ".book-mid-info > h4 > a",
+            "author": "p.author > a.name",
+            "cover": ".book-img-box > a > img",
+            "summary": "p.intro",
+            "detail": ".book-img-box > a"
+        },
+        {
+            "title":"热销榜 月榜",
+            "url": "https://www.hongxiu.com/rank/hotsales?catId=${key}&period=3&pageNum=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [
+                {"key": "-1", "value": "全部"}, {"key": "30020", "value": "现代言情"}, {"key": "30013", "value": "古代言情"}, {"key": "30031", "value": "浪漫青春"}, {"key": "30001", "value": "玄幻言情"},
+                {"key": "30008", "value": "仙侠奇缘"}, {"key": "30036", "value": "悬疑"}, {"key": "30042", "value": "科幻空间"}, {"key": "30050", "value": "游戏竞技"}, {"key": "30083", "value": "短篇小说"}, {"key": "30055", "value": "轻小说"}
+            ],
+            "list": "#rank-view-list > div > ul > li",
+            "name": ".book-mid-info > h4 > a",
+            "author": "p.author > a.name",
+            "cover": ".book-img-box > a > img",
+            "summary": "p.intro",
+            "detail": ".book-img-box > a"
+        },
+        {
+            "title":"热销榜 周榜",
+            "url": "https://www.hongxiu.com/rank/hotsales?catId=${key}&period=2&pageNum=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [
+                {"key": "-1", "value": "全部"}, {"key": "30020", "value": "现代言情"}, {"key": "30013", "value": "古代言情"}, {"key": "30031", "value": "浪漫青春"}, {"key": "30001", "value": "玄幻言情"},
+                {"key": "30008", "value": "仙侠奇缘"}, {"key": "30036", "value": "悬疑"}, {"key": "30042", "value": "科幻空间"}, {"key": "30050", "value": "游戏竞技"}, {"key": "30083", "value": "短篇小说"}, {"key": "30055", "value": "轻小说"}
+            ],
+            "list": "#rank-view-list > div > ul > li",
+            "name": ".book-mid-info > h4 > a",
+            "author": "p.author > a.name",
+            "cover": ".book-img-box > a > img",
+            "summary": "p.intro",
+            "detail": ".book-img-box > a"
+        },
+        {
+            "title":"热销榜 日榜",
+            "url": "https://www.hongxiu.com/rank/hotsales?catId=${key}&period=1&pageNum=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [
+                {"key": "-1", "value": "全部"}, {"key": "30020", "value": "现代言情"}, {"key": "30013", "value": "古代言情"}, {"key": "30031", "value": "浪漫青春"}, {"key": "30001", "value": "玄幻言情"},
+                {"key": "30008", "value": "仙侠奇缘"}, {"key": "30036", "value": "悬疑"}, {"key": "30042", "value": "科幻空间"}, {"key": "30050", "value": "游戏竞技"}, {"key": "30083", "value": "短篇小说"}, {"key": "30055", "value": "轻小说"}
+            ],
+            "list": "#rank-view-list > div > ul > li",
+            "name": ".book-mid-info > h4 > a",
+            "author": "p.author > a.name",
+            "cover": ".book-img-box > a > img",
+            "summary": "p.intro",
+            "detail": ".book-img-box > a"
+        },
+        {
+            "title":"新书榜 月榜",
+            "url": "https://www.hongxiu.com/rank/newbook?catId=${key}&period=3&pageNum=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [
+                {"key": "-1", "value": "全部"}, {"key": "30020", "value": "现代言情"}, {"key": "30013", "value": "古代言情"}, {"key": "30031", "value": "浪漫青春"}, {"key": "30001", "value": "玄幻言情"},
+                {"key": "30008", "value": "仙侠奇缘"}, {"key": "30036", "value": "悬疑"}, {"key": "30042", "value": "科幻空间"}, {"key": "30050", "value": "游戏竞技"}, {"key": "30083", "value": "短篇小说"}, {"key": "30055", "value": "轻小说"}
+            ],
+            "list": "#rank-view-list > div > ul > li",
+            "name": ".book-mid-info > h4 > a",
+            "author": "p.author > a.name",
+            "cover": ".book-img-box > a > img",
+            "summary": "p.intro",
+            "detail": ".book-img-box > a"
+        },
+        {
+            "title":"新书榜 周榜",
+            "url": "https://www.hongxiu.com/rank/newbook?catId=${key}&period=2&pageNum=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [
+                {"key": "-1", "value": "全部"}, {"key": "30020", "value": "现代言情"}, {"key": "30013", "value": "古代言情"}, {"key": "30031", "value": "浪漫青春"}, {"key": "30001", "value": "玄幻言情"},
+                {"key": "30008", "value": "仙侠奇缘"}, {"key": "30036", "value": "悬疑"}, {"key": "30042", "value": "科幻空间"}, {"key": "30050", "value": "游戏竞技"}, {"key": "30083", "value": "短篇小说"}, {"key": "30055", "value": "轻小说"}
+            ],
+            "list": "#rank-view-list > div > ul > li",
+            "name": ".book-mid-info > h4 > a",
+            "author": "p.author > a.name",
+            "cover": ".book-img-box > a > img",
+            "summary": "p.intro",
+            "detail": ".book-img-box > a"
+        },
+        {
+            "title":"新书榜 日榜",
+            "url": "https://www.hongxiu.com/rank/newbook?catId=${key}&period=1&pageNum=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [
+                {"key": "-1", "value": "全部"}, {"key": "30020", "value": "现代言情"}, {"key": "30013", "value": "古代言情"}, {"key": "30031", "value": "浪漫青春"}, {"key": "30001", "value": "玄幻言情"},
+                {"key": "30008", "value": "仙侠奇缘"}, {"key": "30036", "value": "悬疑"}, {"key": "30042", "value": "科幻空间"}, {"key": "30050", "value": "游戏竞技"}, {"key": "30083", "value": "短篇小说"}, {"key": "30055", "value": "轻小说"}
+            ],
+            "list": "#rank-view-list > div > ul > li",
+            "name": ".book-mid-info > h4 > a",
+            "author": "p.author > a.name",
+            "cover": ".book-img-box > a > img",
+            "summary": "p.intro",
+            "detail": ".book-img-box > a"
+        },
+        {
+            "title":"完本榜 月榜",
+            "url": "https://www.hongxiu.com/rank/finish?catId=${key}&period=3&pageNum=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [
+                {"key": "-1", "value": "全部"}, {"key": "30020", "value": "现代言情"}, {"key": "30013", "value": "古代言情"}, {"key": "30031", "value": "浪漫青春"}, {"key": "30001", "value": "玄幻言情"},
+                {"key": "30008", "value": "仙侠奇缘"}, {"key": "30036", "value": "悬疑"}, {"key": "30042", "value": "科幻空间"}, {"key": "30050", "value": "游戏竞技"}, {"key": "30083", "value": "短篇小说"}, {"key": "30055", "value": "轻小说"}
+            ],
+            "list": "#rank-view-list > div > ul > li",
+            "name": ".book-mid-info > h4 > a",
+            "author": "p.author > a.name",
+            "cover": ".book-img-box > a > img",
+            "summary": "p.intro",
+            "detail": ".book-img-box > a"
+        },
+        {
+            "title":"完本榜 周榜",
+            "url": "https://www.hongxiu.com/rank/finish?catId=${key}&period=2&pageNum=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [
+                {"key": "-1", "value": "全部"}, {"key": "30020", "value": "现代言情"}, {"key": "30013", "value": "古代言情"}, {"key": "30031", "value": "浪漫青春"}, {"key": "30001", "value": "玄幻言情"},
+                {"key": "30008", "value": "仙侠奇缘"}, {"key": "30036", "value": "悬疑"}, {"key": "30042", "value": "科幻空间"}, {"key": "30050", "value": "游戏竞技"}, {"key": "30083", "value": "短篇小说"}, {"key": "30055", "value": "轻小说"}
+            ],
+            "list": "#rank-view-list > div > ul > li",
+            "name": ".book-mid-info > h4 > a",
+            "author": "p.author > a.name",
+            "cover": ".book-img-box > a > img",
+            "summary": "p.intro",
+            "detail": ".book-img-box > a"
+        },
+        {
+            "title":"完本榜 日榜",
+            "url": "https://www.hongxiu.com/rank/finish?catId=${key}&period=1&pageNum=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [
+                {"key": "-1", "value": "全部"}, {"key": "30020", "value": "现代言情"}, {"key": "30013", "value": "古代言情"}, {"key": "30031", "value": "浪漫青春"}, {"key": "30001", "value": "玄幻言情"},
+                {"key": "30008", "value": "仙侠奇缘"}, {"key": "30036", "value": "悬疑"}, {"key": "30042", "value": "科幻空间"}, {"key": "30050", "value": "游戏竞技"}, {"key": "30083", "value": "短篇小说"}, {"key": "30055", "value": "轻小说"}
+            ],
+            "list": "#rank-view-list > div > ul > li",
+            "name": ".book-mid-info > h4 > a",
+            "author": "p.author > a.name",
+            "cover": ".book-img-box > a > img",
+            "summary": "p.intro",
+            "detail": ".book-img-box > a"
+        },
+        {
+            "title":"更新榜 月榜",
+            "url": "https://www.hongxiu.com/rank/update?catId=${key}&period=3&pageNum=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [
+                {"key": "-1", "value": "全部"}, {"key": "30020", "value": "现代言情"}, {"key": "30013", "value": "古代言情"}, {"key": "30031", "value": "浪漫青春"}, {"key": "30001", "value": "玄幻言情"},
+                {"key": "30008", "value": "仙侠奇缘"}, {"key": "30036", "value": "悬疑"}, {"key": "30042", "value": "科幻空间"}, {"key": "30050", "value": "游戏竞技"}, {"key": "30083", "value": "短篇小说"}, {"key": "30055", "value": "轻小说"}
+            ],
+            "list": "#rank-view-list > div > ul > li",
+            "name": ".book-mid-info > h4 > a",
+            "author": "p.author > a.name",
+            "cover": ".book-img-box > a > img",
+            "summary": "p.intro",
+            "detail": ".book-img-box > a"
+        },
+        {
+            "title":"更新榜 周榜",
+            "url": "https://www.hongxiu.com/rank/update?catId=${key}&period=2&pageNum=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [
+                {"key": "-1", "value": "全部"}, {"key": "30020", "value": "现代言情"}, {"key": "30013", "value": "古代言情"}, {"key": "30031", "value": "浪漫青春"}, {"key": "30001", "value": "玄幻言情"},
+                {"key": "30008", "value": "仙侠奇缘"}, {"key": "30036", "value": "悬疑"}, {"key": "30042", "value": "科幻空间"}, {"key": "30050", "value": "游戏竞技"}, {"key": "30083", "value": "短篇小说"}, {"key": "30055", "value": "轻小说"}
+            ],
+            "list": "#rank-view-list > div > ul > li",
+            "name": ".book-mid-info > h4 > a",
+            "author": "p.author > a.name",
+            "cover": ".book-img-box > a > img",
+            "summary": "p.intro",
+            "detail": ".book-img-box > a"
+        },
+        {
+            "title":"更新榜 日榜",
+            "url": "https://www.hongxiu.com/rank/update?catId=${key}&period=1&pageNum=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [
+                {"key": "-1", "value": "全部"}, {"key": "30020", "value": "现代言情"}, {"key": "30013", "value": "古代言情"}, {"key": "30031", "value": "浪漫青春"}, {"key": "30001", "value": "玄幻言情"},
+                {"key": "30008", "value": "仙侠奇缘"}, {"key": "30036", "value": "悬疑"}, {"key": "30042", "value": "科幻空间"}, {"key": "30050", "value": "游戏竞技"}, {"key": "30083", "value": "短篇小说"}, {"key": "30055", "value": "轻小说"}
+            ],
+            "list": "#rank-view-list > div > ul > li",
+            "name": ".book-mid-info > h4 > a",
+            "author": "p.author > a.name",
+            "cover": ".book-img-box > a > img",
+            "summary": "p.intro",
+            "detail": ".book-img-box > a"
+        },
+        {
+            "title":"礼物榜 月榜",
+            "url": "https://www.hongxiu.com/rank/reward?catId=${key}&period=3&pageNum=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [
+                {"key": "-1", "value": "全部"}, {"key": "30020", "value": "现代言情"}, {"key": "30013", "value": "古代言情"}, {"key": "30031", "value": "浪漫青春"}, {"key": "30001", "value": "玄幻言情"},
+                {"key": "30008", "value": "仙侠奇缘"}, {"key": "30036", "value": "悬疑"}, {"key": "30042", "value": "科幻空间"}, {"key": "30050", "value": "游戏竞技"}, {"key": "30083", "value": "短篇小说"}, {"key": "30055", "value": "轻小说"}
+            ],
+            "list": "#rank-view-list > div > ul > li",
+            "name": ".book-mid-info > h4 > a",
+            "author": "p.author > a.name",
+            "cover": ".book-img-box > a > img",
+            "summary": "p.intro",
+            "detail": ".book-img-box > a"
+        },
+        {
+            "title":"礼物榜 周榜",
+            "url": "https://www.hongxiu.com/rank/reward?catId=${key}&period=2&pageNum=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [
+                {"key": "-1", "value": "全部"}, {"key": "30020", "value": "现代言情"}, {"key": "30013", "value": "古代言情"}, {"key": "30031", "value": "浪漫青春"}, {"key": "30001", "value": "玄幻言情"},
+                {"key": "30008", "value": "仙侠奇缘"}, {"key": "30036", "value": "悬疑"}, {"key": "30042", "value": "科幻空间"}, {"key": "30050", "value": "游戏竞技"}, {"key": "30083", "value": "短篇小说"}, {"key": "30055", "value": "轻小说"}
+            ],
+            "list": "#rank-view-list > div > ul > li",
+            "name": ".book-mid-info > h4 > a",
+            "author": "p.author > a.name",
+            "cover": ".book-img-box > a > img",
+            "summary": "p.intro",
+            "detail": ".book-img-box > a"
+        },
+        {
+            "title":"礼物榜 日榜",
+            "url": "https://www.hongxiu.com/rank/reward?catId=${key}&period=1&pageNum=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [
+                {"key": "-1", "value": "全部"}, {"key": "30020", "value": "现代言情"}, {"key": "30013", "value": "古代言情"}, {"key": "30031", "value": "浪漫青春"}, {"key": "30001", "value": "玄幻言情"},
+                {"key": "30008", "value": "仙侠奇缘"}, {"key": "30036", "value": "悬疑"}, {"key": "30042", "value": "科幻空间"}, {"key": "30050", "value": "游戏竞技"}, {"key": "30083", "value": "短篇小说"}, {"key": "30055", "value": "轻小说"}
+            ],
+            "list": "#rank-view-list > div > ul > li",
+            "name": ".book-mid-info > h4 > a",
+            "author": "p.author > a.name",
+            "cover": ".book-img-box > a > img",
+            "summary": "p.intro",
+            "detail": ".book-img-box > a"
+        },
+        {
+            "title":"点击榜 月榜",
+            "url": "https://www.hongxiu.com/rank/click?catId=${key}&period=3&pageNum=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [
+                {"key": "-1", "value": "全部"}, {"key": "30020", "value": "现代言情"}, {"key": "30013", "value": "古代言情"}, {"key": "30031", "value": "浪漫青春"}, {"key": "30001", "value": "玄幻言情"},
+                {"key": "30008", "value": "仙侠奇缘"}, {"key": "30036", "value": "悬疑"}, {"key": "30042", "value": "科幻空间"}, {"key": "30050", "value": "游戏竞技"}, {"key": "30083", "value": "短篇小说"}, {"key": "30055", "value": "轻小说"}
+            ],
+            "list": "#rank-view-list > div > ul > li",
+            "name": ".book-mid-info > h4 > a",
+            "author": "p.author > a.name",
+            "cover": ".book-img-box > a > img",
+            "summary": "p.intro",
+            "detail": ".book-img-box > a"
+        },
+        {
+            "title":"点击榜 周榜",
+            "url": "https://www.hongxiu.com/rank/click?catId=${key}&period=2&pageNum=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [
+                {"key": "-1", "value": "全部"}, {"key": "30020", "value": "现代言情"}, {"key": "30013", "value": "古代言情"}, {"key": "30031", "value": "浪漫青春"}, {"key": "30001", "value": "玄幻言情"},
+                {"key": "30008", "value": "仙侠奇缘"}, {"key": "30036", "value": "悬疑"}, {"key": "30042", "value": "科幻空间"}, {"key": "30050", "value": "游戏竞技"}, {"key": "30083", "value": "短篇小说"}, {"key": "30055", "value": "轻小说"}
+            ],
+            "list": "#rank-view-list > div > ul > li",
+            "name": ".book-mid-info > h4 > a",
+            "author": "p.author > a.name",
+            "cover": ".book-img-box > a > img",
+            "summary": "p.intro",
+            "detail": ".book-img-box > a"
+        },
+        {
+            "title":"点击榜 日榜",
+            "url": "https://www.hongxiu.com/rank/click?catId=${key}&period=1&pageNum=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [
+                {"key": "-1", "value": "全部"}, {"key": "30020", "value": "现代言情"}, {"key": "30013", "value": "古代言情"}, {"key": "30031", "value": "浪漫青春"}, {"key": "30001", "value": "玄幻言情"},
+                {"key": "30008", "value": "仙侠奇缘"}, {"key": "30036", "value": "悬疑"}, {"key": "30042", "value": "科幻空间"}, {"key": "30050", "value": "游戏竞技"}, {"key": "30083", "value": "短篇小说"}, {"key": "30055", "value": "轻小说"}
+            ],
+            "list": "#rank-view-list > div > ul > li",
+            "name": ".book-mid-info > h4 > a",
+            "author": "p.author > a.name",
+            "cover": ".book-img-box > a > img",
+            "summary": "p.intro",
+            "detail": ".book-img-box > a"
+        },
+        {
+            "title":"周推荐榜",
+            "url": "https://www.hongxiu.com/rank/recom?catId=${key}&pageNum=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [
+                {"key": "-1", "value": "全部"}, {"key": "30020", "value": "现代言情"}, {"key": "30013", "value": "古代言情"}, {"key": "30031", "value": "浪漫青春"}, {"key": "30001", "value": "玄幻言情"},
+                {"key": "30008", "value": "仙侠奇缘"}, {"key": "30036", "value": "悬疑"}, {"key": "30042", "value": "科幻空间"}, {"key": "30050", "value": "游戏竞技"}, {"key": "30083", "value": "短篇小说"}, {"key": "30055", "value": "轻小说"}
+            ],
+            "list": "#rank-view-list > div > ul > li",
+            "name": ".book-mid-info > h4 > a",
+            "author": "p.author > a.name",
+            "cover": ".book-img-box > a > img",
+            "summary": "p.intro",
+            "detail": ".book-img-box > a"
+        },
+        {
+            "title":"收藏榜",
+            "url": "https://www.hongxiu.com/rank/collect?catId=${key}&pageNum=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [
+                {"key": "-1", "value": "全部"}, {"key": "30020", "value": "现代言情"}, {"key": "30013", "value": "古代言情"}, {"key": "30031", "value": "浪漫青春"}, {"key": "30001", "value": "玄幻言情"},
+                {"key": "30008", "value": "仙侠奇缘"}, {"key": "30036", "value": "悬疑"}, {"key": "30042", "value": "科幻空间"}, {"key": "30050", "value": "游戏竞技"}, {"key": "30083", "value": "短篇小说"}, {"key": "30055", "value": "轻小说"}
+            ],
+            "list": "#rank-view-list > div > ul > li",
+            "name": ".book-mid-info > h4 > a",
+            "author": "p.author > a.name",
+            "cover": ".book-img-box > a > img",
+            "summary": "p.intro",
+            "detail": ".book-img-box > a"
+        },
+        {
+            "title":"签约作者新书榜",
+            "url": "https://www.hongxiu.com/rank/newsign?catId=${key}&pageNum=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [
+                {"key": "-1", "value": "全部"}, {"key": "30020", "value": "现代言情"}, {"key": "30013", "value": "古代言情"}, {"key": "30031", "value": "浪漫青春"}, {"key": "30001", "value": "玄幻言情"},
+                {"key": "30008", "value": "仙侠奇缘"}, {"key": "30036", "value": "悬疑"}, {"key": "30042", "value": "科幻空间"}, {"key": "30050", "value": "游戏竞技"}, {"key": "30083", "value": "短篇小说"}, {"key": "30055", "value": "轻小说"}
+            ],
+            "list": "#rank-view-list > div > ul > li",
+            "name": ".book-mid-info > h4 > a",
+            "author": "p.author > a.name",
+            "cover": ".book-img-box > a > img",
+            "summary": "p.intro",
+            "detail": ".book-img-box > a"
+        },
+        {
+            "title":"公众作品人气榜",
+            "url": "https://www.hongxiu.com/rank/popular?catId=${key}&pageNum=${page}",
+            "page": 1,
+            "size": 20,
+            "categories": [
+                {"key": "-1", "value": "全部"}, {"key": "30020", "value": "现代言情"}, {"key": "30013", "value": "古代言情"}, {"key": "30031", "value": "浪漫青春"}, {"key": "30001", "value": "玄幻言情"},
+                {"key": "30008", "value": "仙侠奇缘"}, {"key": "30036", "value": "悬疑"}, {"key": "30042", "value": "科幻空间"}, {"key": "30050", "value": "游戏竞技"}, {"key": "30083", "value": "短篇小说"}, {"key": "30055", "value": "轻小说"}
+            ],
+            "list": "#rank-view-list > div > ul > li",
+            "name": ".book-mid-info > h4 > a",
+            "author": "p.author > a.name",
+            "cover": ".book-img-box > a > img",
+            "summary": "p.intro",
+            "detail": ".book-img-box > a"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "name": "E文学",
+    "url": "ewenxue.org",
+    "version": 101,
+    "search": {
+        "url": "http://ewenxue.org/search.htm?keyword=${key}",
+        "charset": "utf-8",
+        "list": "#novel-list > ul > li.list-group-item.clearfix:nth-child(n+2)",
+        "name": ".col-xs-3 > a",
+        "author": ".col-xs-2:nth-child(4)",
+        "cover": "",
+        "detail": ".col-xs-3>a"
+    },
+    "detail": {
+        "name": "ol.breadcrumb > li.active",
+        "author": "h1 > small@replace->作者：->",
+        "cover": ".col-xs-2 > img",
+        "summary": "#shot",
+        "status": "li.col-xs-4:nth-child(3)",
+        "update": "li.col-xs-4:nth-child(4)@replace->更新时间：->",
+        "lastChapter": "li.col-xs-12:nth-child(5) > a",
+        "catalog": "li.col-xs-12:nth-child(6) > a:nth-child(1)"
+    },
+    "catalog": {
+        "list": "#chapters-list > li",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#cContent > p"
+    }
+}

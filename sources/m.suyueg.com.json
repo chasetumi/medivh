@@ -1,0 +1,34 @@
+{
+    "name": "速阅阁",
+    "url": "m.suyueg.com",
+    "version": 103,
+    "search": {
+        "url": "http://m.suyueg.com/s.php@post->s=${key}&type=articlename",
+        "charset": "gbk",
+        "list": ".sone",
+        "name": ".sone > a",
+        "author": ".sone > span",
+        "detail": ".sone > a"
+    },
+    "detail": {
+        "cover": ".pic > img",
+        "summary": ".intro > p",
+        "update": ".infotype > p:nth-child(3)@match->(?<=时间：)(.+)",
+        "lastChapter": ".infotype > p:nth-child(4) > a",
+        "catalog": ".gochapter > a@replace->m.suyueg->www.suyueg"
+    },
+    "catalog": {
+        "list": "ul.chapters > li",
+        "orderBy": 0,
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#articlecontent",
+        "purify": [
+            "还在找\"(.+)\"免费小说?",
+            "\\(www.suyueg.com =速阅阁\\)",
+            "百度直接搜索: \"速阅阁\" 速度阅读不等待!"
+        ]
+    }
+}

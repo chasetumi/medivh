@@ -1,0 +1,29 @@
+{
+    "name": "摘书网",
+    "url": "www.zhaishuw.com",
+    "version": 100,
+    "search": {
+        "url": "https://www.zhaishuw.com/search.html?searchkey=${key}&searchtype=all",
+        "charset": "utf-8",
+        "list": ".librarylist>li",
+        "name": ".info>span:nth-child(1)>a",
+        "cover":".pt-ll-l>a>img",
+        "author": ".info>span:nth-child(2)>a",
+        "detail":".info>span:nth-child(1)>a"
+    },
+    "detail": {
+        "name":"#info>h1",
+        "cover":"#fmimg>img",
+        "author":"p:nth-child(2)>a:nth-child(1)",
+        "update": "p:nth-child(7)@match->(?<=最后更新：)(.+)",
+        "summary":"#intro"
+        },
+    "catalog": {
+        "list": "#list>dl>dd:nth-child(n+11)",
+        "name": "dd>a",
+        "chapter": "dd>a"
+    },
+    "chapter": {
+        "content": ".content"
+    }
+}

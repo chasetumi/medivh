@@ -1,0 +1,28 @@
+{
+    "name": "有兔阅读",
+    "url": "app.youzibank.com",
+    "version": 100,
+    "search": {
+        "url": "http://app.youzibank.com/es/search/book?pageNo=1&pageSize=10&q=${key}@header->Seq:3b28f4be398947da273c3d1ec2c2fb8b",
+        "list": "$.data[*]",
+        "name": "$.name",
+        "author": "$.author",
+        "cover": "https://book.chengxinqinye.com/book${$.photoPath}",
+        "detail": "/book/info?bookId=${$.id}@header->Seq:3b28f4be398947da273c3d1ec2c2fb8b"
+    },
+    "detail": {
+        "name": "$.data[0].name",
+        "author": "$.data[0].author",
+        "cover": "https://book.chengxinqinye.com/book${$.data[0].photoPath}",
+        "summary": "$.data[0].intro",
+        "status": "$.data[0].fullFlag@equal->3",
+        "update": "$.data[0].lastUpdate",
+        "catalog": "/book/chapter/listAll?bookId=${$.data[0].id}"
+    },
+    "catalog": {
+        "list": "$.data",
+        "name": "$.name",
+        "chapter": "http://book.chengxinqinye.com/book${$.filePath}"
+    },
+    "chapter": {}
+}

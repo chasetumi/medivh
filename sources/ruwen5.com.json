@@ -1,0 +1,25 @@
+{
+    "name": "如文网",
+    "url": "ruwen5.com",
+    "remarks": "该网站30秒内只能搜索1次资源",
+    "version": 101,
+    "search": {
+        "url": "http://www.ruwen5.com/home/search@post->action=search&q=${key}",
+        "list": "ul.gengxin > li",
+        "name": "a",
+        "detail": "a"
+    },
+    "detail": {
+        "name": "h1"
+    },
+    "catalog": {
+        "list": "dd",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#BookText",
+        "filter": ["@p", "%-->>"],
+        "page": "a[rel=\"next\"]:matches(下一页)"
+    }
+}

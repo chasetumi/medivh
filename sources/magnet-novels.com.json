@@ -1,0 +1,76 @@
+{
+  "name": "MAGNET MACROLINK",
+  "url": "magnet-novels.com",
+  "version": 100,
+  "search": {
+      "url": "https://www.magnet-novels.com/api/novel/searchNovels@post->keyword=${key}&size=20",
+      "charset": "utf-8",
+      "list": "$.data.data[*]",
+      "name": "$.name",
+      "author": "$.author.name",
+      "detail": "https://www.magnet-novels.com/api/novel/reader/getNovelInfo@post->novel_id=${$.id}",
+      "summary": "$.synopsis"
+  },
+  "detail": {
+    "name": "$.data.name",
+    "author": "$.data.author.name",
+    "summary": "$.data.synopsis",
+    "cover": "$.data.cover_url",
+    "update": "$.data.last_section.latest_public_time",
+    "lastChapter": "$.data.last_section.title",
+    "catalog": "https://www.magnet-novels.com/api/web/v2/reader/getNovelContents@post->novel_id=${$.data.id}"
+  },
+  "catalog": {
+      "list": "$.data[*]",
+      "orderBy": 0,
+      "name": "$.title",
+      "chapter": "https://www.magnet-novels.com/api/web/v2/reader/getNovelSection@post->novel_id=${$.novel_id}&section_id=${$.id}"
+  },
+  "chapter": {
+      "content": "$.data.content_html"
+  },
+  "rank": [
+      {
+          "title": "ジャンル",
+          "url": "https://www.magnet-novels.com/api/web/v2/get24hHotNovels@post->genre=${key}&page=${page}",
+          "categories": [{"key": "1", "value": "ファンタジー"}, {"key": "2", "value": "恋愛"}, {"key": "3", "value": "ミステリー"}, {"key": "4", "value": "ホラー"}, {"key": "5", "value": "SF"}, {"key": "6", "value": "エッセイ"}, {"key": "7", "value": "歴史"}, {"key": "8", "value": "現代"}, {"key": "9", "value": "VRMMO"}, {"key": "10", "value": "その他文芸"}],
+          "page": 1,
+          "list": "$.data.data[*]",
+          "name": "$.name",
+          "author": "$.author.name",
+          "cover": "$.cover_url",
+          "detail": "https://www.magnet-novels.com/api/novel/reader/getNovelInfo@post->novel_id=${$.id}"
+      },
+      {
+          "title": "ランキング",
+          "url": "https://www.magnet-novels.com/api/web/v2/get24hHotNovels@post->model=8&page=${page}&ranks=['${key}']&record_count=10",
+          "categories": [{"key": "novel_presents", "value": "マグネットランキング"}, {"key": "novel_magnetic_fields", "value": "磁界ランキング"}, {"key": "user_favorite_novels", "value": "ブックマークランキング"}, {"key": "novel_thumbups", "value": "いいねランキング"}, {"key": "user_magnet_plus", "value": "作者ランキング"}, {"key": "user_magnet_minus", "value": "読者ランキング"}],
+          "page": 1,
+          "list": "$.data.data[*]",
+          "name": "$.name",
+          "author": "$.author.name",
+          "cover": "$.cover_url",
+          "detail": "https://www.magnet-novels.com/api/novel/reader/getNovelInfo@post->novel_id=${$.id}"
+      },
+      {
+          "title": "公式連載",
+          "url": "https://www.magnet-novels.com/api/web/v2/getVipNovels@post->page=${page}&page_size=10",
+          "page": 1,
+          "list": "$.data.data[*]",
+          "name": "$.name",
+          "author": "$.author.name",
+          "cover": "$.cover_url",
+          "detail": "https://www.magnet-novels.com/api/novel/reader/getNovelInfo@post->novel_id=${$.id}"
+      },
+      {
+          "title": "最近皆に応援されている作品",
+          "url": "https://www.magnet-novels.com/api/web/v2/getMostDonatedNovels@post->page=${page}&page_size=12",
+          "page": 1,
+          "list": "$.data.data[*]",
+          "name": "$.name",
+          "author": "$.author.name",
+          "cover": "$.cover_url",
+          "detail": "https://www.magnet-novels.com/api/novel/reader/getNovelInfo@post->novel_id=${$.id}"
+      }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+    "name": "百合小说网 [晋江]",
+    "url": "www.baihexs.com",
+    "version": 103,
+    "search": {
+        "url": "https://www.baihexs.com/modules/article/search.php@post->searchkey=${key}&&searchtype=articlename",
+        "charset": "gbk",
+        "list": "tr#nr",
+        "name": "td:nth-child(1) > a",
+        "author": "td:nth-child(3)",
+        "detail": "td:nth-child(1) > a"
+    },
+    "detail": {
+        "name": "#bookinfo > div.bookright > h1",
+        "author": "#author > a",
+        "cover": "#bookimg > img",
+        "summary": "#bookintro",
+        "status": "#count > span:nth-child(6)",
+        "update": "span.new_t@match->(?<=更新：)(.+)",
+        "lastChapter": "#newlist > ul > li:nth-child(1) > a",
+        "catalog": "#reader > a"
+    },
+    "catalog": {
+        "list": "#readerlist > ul > li",
+        "orderBy": 0,
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content",
+        "purify": [
+            "\n感谢阅读，请您牢记：百合小说网 www.baihexs.com"
+        ]
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "name": "求书神站",
+    "url": "www.qiushushenzhan.com",
+    "version": 101,
+    "search": {
+        "url": "https://www.qiushushenzhan.com/modules/article/search.php@post->searchtype=articlename&searchkey=${key}",
+        "charset": "gbk",
+        "list": "div.resultLeft > ul > li",
+        "name": "li > div.sortPhr > a > h3",
+        "cover":"li > div.sortImg > a > img",
+        "author": "li > div.sortPhr > p.author@match->(?<=作者：).+",
+        "detail":"li > div.sortPhr > a",
+        "summary": "li > div.sortPhr > p.intro"
+    },
+    "detail": {
+        "cover":"div.detailTopLeft > img",
+        "author":"div.writer",
+        "status":"div.detailTopLeft > span",
+        "update": "div.chapter > div > span@match->(.+)(?= 更新)",
+        "lastChapter": " div.chapter > div > span > a",
+        "summary":"div.detailTopMid > table > tbody > tr:nth-child(3) > td:nth-child(2)"
+        },
+    "catalog": {
+        "list": "div.chapter > ul > li",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "div.reader > div.readerCon > p",
+        "page":"div.readPage > a:nth-child(3)",
+        "purify": ["(?=一秒).+(?<=com)"]
+    }
+}

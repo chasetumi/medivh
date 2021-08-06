@@ -1,0 +1,33 @@
+{
+    "name": "八戒中文",
+    "url": "www.8jzw.com",
+    "version": 101,
+    "search": {
+        "url": "http://www.8jzw.com/search.php?q=${key}",
+        "charset": "utf-8",
+        "list": ".result-item.result-game-item",
+        "name": "h3 > a",
+        "author": "div.result-game-item-info > p:nth-child(1) > span:nth-child(2)",
+        "cover": ".result-game-item-pic > a > img",
+        "summary": ".result-game-item-desc",
+        "detail": "h3 > a"
+    },
+    "detail": {
+        "name": "meta[property=og:title]@attr->content",
+        "author": "meta[property=og:novel:author]@attr->content",
+        "cover": "meta[property=og:image]@attr->content",
+        "summary": "meta[property=og:description]@attr->content",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ""
+    },
+    "catalog": {
+        "list": "#list > dl > dd",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content"
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "name": "亲亲小说网",
+    "url": "m.qinqinxsw.com",
+    "version": 100,
+    "search": {
+        "url": "https://m.qinqinxsw.com/s.php@post->keyword=${key}&t=1",
+        "charset": "UTF-8",
+        "list": ".hot_sale",
+        "name": "p.title",
+        "author": "p.author@match->(?<=作者：).+",
+        "detail": "a"
+    },
+    "detail": {
+      "cover": ".synopsisArea_detail>img",
+      "summary": "p.review",
+      "status":".synopsisArea_detail> p:nth-child(4)@match->(?<=状态：).+",
+      "update": ".synopsisArea_detail> p:nth-child(6)@match->(?<=更新：).+",
+        "catalog": ".recommend>h2:nth-child(3)>a"
+    },
+    "catalog": {
+        "list": "#chapterlist > p:nth-child(n+2)",
+        "page":".pagebtn > a:nth-child(3)",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": ".ReadAjax_content",
+        "page":"p:nth-child(27)>A#pt_next:matches(下一页)",
+        "purify": ["(阅读提示：).+?(即可。)",
+        "(也可以点击).+?(阅读本章节！)",
+        "(『加入书签).+?(阅读』)",
+        "(（本章未完).+?(翻页）)"
+      ]
+   } 
+}

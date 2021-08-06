@@ -1,0 +1,29 @@
+{
+    "name": "天籁小说网",
+    "url": "www.23txt.com",
+    "version": 105,
+    "search": {
+        "url": "https://m.23txt.com/search.php?q=${key}",
+        "charset": "utf-8",
+        "list": "div.result-list > div.result-item.result-game-item",
+        "name": " div.result-game-item-detail>h3",
+        "author": "div.result-game-item-detail>div>p:eq(0)>span:eq(1)",
+        "cover": "div.result-game-item-pic>a>img@attr->src",
+        "summary": "div>p.result-game-item-desc",
+        "detail": "div.result-game-item-detail>h3>a@attr->href@replace->m.23txt->www.23txt"
+    },
+    "detail": {
+        "cover": "#fmimg > img",
+        "status": "#info > p:nth-child(3)",
+        "update": "#info > p:nth-child(4)@match->(?<=最后更新：).+",
+        "lastChapter": "#info > p:nth-child(5)"
+    },
+    "catalog": {
+        "list": "#list > dl > dd",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content"
+    }
+}

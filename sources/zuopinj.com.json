@@ -1,0 +1,27 @@
+{
+    "name": "作品集",
+    "url": "zuopinj.com",
+    "version": 100,
+    "search": {
+        "url": "http://so.zuopinj.com/search/index.php@post->tbname=bookname&show=title&tempid=3&keyboard=${key}",
+        "list": ".search-bookele",
+        "name": "h3",
+        "cover": "img",
+        "detail": "a"
+    },
+    "detail": {
+        "author": ".infos > span@match->(?<=作者：).+(?=最后更新)",
+        "summary": ".book_info > p",
+        "status": ".infos > span@match->(?<=状态：).+(?=人在读)",
+        "update": ".infos > span@match->(?<=最后更新：).+(?=状态)",
+        "lastChapter": ".upd > a"
+    },
+    "catalog": {
+        "list": ".book_list > ul > li",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#htmlContent > p"
+    }
+}

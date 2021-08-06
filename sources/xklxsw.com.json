@@ -1,0 +1,24 @@
+{
+    "name": "可乐小说网",
+    "url": "xklxsw.com",
+    "version": 100,
+    "search": {
+        "url": "https://www.xklxsw.com/modules/article/search.php?searchkey=${key}&sbt=%CB%D1%CB%F7",
+        "charset": "gb2312",
+        "list": "ul.update-list > li",
+        "name": ".n2 > a",
+        "detail": ".n2 > a"
+    },
+    "detail": {
+        "name": "h1"
+    },
+    "catalog": {
+        "list": "body > div.content > div:nth-child(6) > span",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content",
+        "filter": ["@b", "@p", "%纯文字在线阅读本站域名|手机同步阅读请访问"]
+    }
+}

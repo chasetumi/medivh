@@ -1,0 +1,33 @@
+{
+    "name": "啃书网",
+    "url": "www.kenshuzw.com",
+    "version": 100,
+    "search": {
+        "url": "http://www.kenshuzw.com/modules/article/search.php@post->area=2&searchkey=${key}",
+        "charset": "utf-8",
+        "list": ".item.clearfix",
+        "name": "h3 > a",
+        "author": ".author",
+        "cover": "a > img",
+        "summary": ".intro",
+        "detail": "h3 > a"
+    },
+    "detail": {
+        "name": "meta[property=og:book_name]@attr->content",
+        "author": "meta[property=og:novel:author]@attr->content",
+        "cover": "meta[property=og:image]@attr->content",
+        "summary": "",
+        "status": "",
+        "update": "",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ".bookbtn-txt > a.catalogbtn"
+    },
+    "catalog": {
+        "list": ".clearfix.chapter-list > li > span",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": ".article-con"
+    }
+}

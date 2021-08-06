@@ -1,0 +1,24 @@
+
+{
+    "name": "霹雳书坊",
+    "url": "pilibook.com",
+    "version": 100,
+    "search": {
+        "url": "https://m.pilibook.com/s.php@post->s=${key}&type=articlename",
+        "charset": "gb2312",
+        "list": "div.searchresult > p.sone",
+        "name": "a",
+        "detail": "a@replace->m.pilibook.com/wapbook/->www.pilibook.com/book_@replace->.html->/"
+    },
+    "detail": {
+    },
+    "catalog": {
+        "list": ".book_list > ul > li",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#htmlContent",
+        "filter": ["@div", "@p"]
+    }
+}

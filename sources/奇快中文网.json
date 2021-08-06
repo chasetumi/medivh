@@ -1,0 +1,33 @@
+{
+    "name": "奇快中文网",
+    "url": "www.7kwx.com",
+    "version": 101,
+    "search": {
+        "url": "https://www.7kwx.com/index.php?s=/web/index/search@post->name=${key}",
+		"charset": "utf-8",
+        "list": ".novelslist2 > ul > li:nth-child(n+2)",
+        "name": ".s2 > a",
+        "author": ".s4",
+        "cover": "",
+        "detail": ".s2 > a"
+    },
+    "detail": {
+        "name": "meta[property=og:novel:book_name]@attr->content",
+        "author": "meta[property=og:novel:author]@attr->content",
+        "cover": "meta[property=og:image]@attr->content",
+        "summary": "#intro",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ""
+    },
+    "catalog": {
+        "list": "#list > dl > dd",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content",
+		"filter": ["@p", "@a"]
+    }
+}

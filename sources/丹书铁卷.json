@@ -1,0 +1,33 @@
+{
+    "name": "丹书铁卷",
+    "url": "www.dstiejuan.com",
+    "version": 101,
+    "search": {
+        "url": "http://www.dstiejuan.com/search.html@post->searchkey=${key}",
+		"charset": "utf-8",
+        "list": "ul.library>li",
+        "name": "a.bookname",
+        "author": "p>a:nth-child(1)",
+        "cover": "a.bookimg>img",
+		"summary": "p.intro",
+        "detail": "a.bookname"
+    },
+    "detail": {
+        "name": "meta[property=og:novel:book_name]@attr->content",
+        "author": "meta[property=og:novel:author]@attr->content",
+        "cover": "meta[property=og:image]@attr->content",
+        "summary": ".content>p.intro",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ".action>a:nth-child(1)"
+    },
+    "catalog": {
+        "list": ".read > dl:nth-child(2) > dd",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content>p"
+    }
+}

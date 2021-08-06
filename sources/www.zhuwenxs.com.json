@@ -1,0 +1,30 @@
+{
+    "name": "猪文小说",
+    "url": "www.zhuwenxs.com",
+    "version": 100,
+    "search": {
+        "url": "https://www.zhuwenxs.com/search.html@post->searchtype=all&searchkey=${key}",
+        "charset": "UTF-8",
+        "cover": "dt > a > img",
+        "list": "#sitembox>dl",
+        "name": " dl> dd:nth-child(2) > h3 > a",
+        "author": "dd:nth-child(3) > span:nth-child(1)",
+        "summary": "dd.book_des",
+        "detail":"dl> dd:nth-child(2) > h3 > a"
+    },
+    "detail": {
+        "cover":"#fmimg > img",
+        "author":"#info > p:nth-child(2) > a",
+        "update": "#info > p:nth-child(4)@match->(?<=最后更新：).+",
+        "lastChapter": "#info > p:nth-child(5) > a",
+        "summary":"#intro"
+        },
+    "catalog": {
+        "list": "#list > dl > dd:nth-child(n+14)",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content"
+    }
+}

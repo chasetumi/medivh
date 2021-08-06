@@ -1,0 +1,29 @@
+{
+    "name": "梧州中文台",
+    "url": "www.wzzw.la",
+    "version": 101,
+    "search": {
+        "url": "http://www.wzzw.la/search.htm?keyword=${key}",
+        "list": "#novel-list > ul > li:gt(0)",
+        "name": "div:nth-child(2) > a",
+        "author": "div:nth-child(4)",
+        "detail": "div:nth-child(2) > a"
+    },
+    "detail": {
+        "cover": "meta[property=og:image]@attr->content",
+        "summary": "meta[property=og:description]@attr->content",
+        "status": "article > div > div.col-xs-8 > ul > li:nth-child(3)",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": "a.btn.btn-danger"
+    },
+    "catalog": {
+        "list": "#chapters-list > li",
+        "orderBy": 0,
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#txtContent"
+    }
+}

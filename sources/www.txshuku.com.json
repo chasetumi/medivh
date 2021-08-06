@@ -1,0 +1,163 @@
+{
+    "name": "天下书库",
+    "url": "www.txshuku.com",
+    "version": 103,
+    "search": {
+        "url": "https://www.txshuku.com/modules/article/search.php?searchtype=articlename&searchkey=${key}",
+        "charset": "gbk",
+        "list": "ul.bd > li",
+        "name": "p.name > a",
+        "author": "p:nth-child(3) > span:nth-child(1)@replace->作者：",
+        "cover": "a > img",
+        "detail": "p.name > a"
+    },
+    "detail": {
+        "name": "meta[property=og:novel:book_name]@attr->content",
+        "author": "meta[property=og:novel:author]@attr->content",
+        "cover": "meta[property=og:image]@attr->content",
+        "summary": ".playlist > .mlist",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": "div.l_b > div > a:nth-child(1)"
+    },
+    "catalog": {
+        "list": "ul.mulu_list > li",
+        "orderBy": 0,
+        "name": "a",
+        "chapter": "a",
+        "page": ".chapter_mulu > div > span.right > a[href]:matches(下一页)"
+    },
+    "chapter": {
+        "content": "#htmlContent",
+        "page": "#pager_next:matches(下一页)"
+    },
+    "rank": [
+        {
+            "title":"点击榜",
+            "url": "https://m.txshuku.com/${key}visit_${page}.html",
+            "page": 1,
+            "size": 30,
+            "categories": [
+                {"key": "all", "value": "总榜"}, {"key": "month", "value": "月榜"},
+                {"key": "week", "value": "周榜"}, {"key": "day", "value": "日榜"}
+            ],
+            "list": "ul.bk-list > li",
+            "name": "p.title > a",
+            "author": "span.author > a",
+            "cover": "a > img",
+            "detail": "p.title > a@attr->href@replace->//m.->//www."
+        },
+        {
+            "title":"推荐榜",
+            "url": "https://m.txshuku.com/${key}vote_${page}.html",
+            "page": 1,
+            "size": 30,
+            "categories": [
+                {"key": "all", "value": "总榜"}, {"key": "month", "value": "月榜"},
+                {"key": "week", "value": "周榜"}, {"key": "day", "value": "日榜"}
+            ],
+            "list": "ul.bk-list > li",
+            "name": "p.title > a",
+            "author": "span.author > a",
+            "cover": "a > img",
+            "detail": "p.title > a@attr->href@replace->//m.->//www."
+        },
+        {
+            "title":"总收藏榜",
+            "url": "https://m.txshuku.com/goodnum_${page}.html",
+            "page": 1,
+            "size": 30,
+            "list": "ul.bk-list > li",
+            "name": "p.title > a",
+            "author": "span.author > a",
+            "cover": "a > img",
+            "detail": "p.title > a@attr->href@replace->//m.->//www."
+        },
+        {
+            "title": "最新入库",
+            "url": "https://m.txshuku.com/postdate_${page}.html",
+            "page": 1,
+            "size": 30,
+            "list": "ul.bk-list > li",
+            "name": "p.title > a",
+            "author": "span.author > a",
+            "cover": "a > img",
+            "detail": "p.title > a@attr->href@replace->//m.->//www."
+        },
+        {
+            "title": "最近更新",
+            "url": "https://m.txshuku.com/lastupdate_${page}.html",
+            "page": 1,
+            "size": 30,
+            "list": "ul.bk-list > li",
+            "name": "p.title > a",
+            "author": "span.author > a",
+            "cover": "a > img",
+            "detail": "p.title > a@attr->href@replace->//m.->//www."
+        },
+        {
+            "title":"小说阅读",
+            "url": "https://www.txshuku.com/sort${key}/0/${page}.html",
+            "page": 1,
+            "size": 30,
+            "categories": [
+                {"key": "18", "value": "玄幻"}, {"key": "16", "value": "武侠"},
+                {"key": "15", "value": "言情"}, {"key": "22", "value": "历史"},
+                {"key": "23", "value": "官场"}, {"key": "21", "value": "科幻"},
+                {"key": "20", "value": "灵异"}, {"key": "19", "value": "穿越"},
+                {"key": "13", "value": "古典"}, {"key": "17", "value": "现代"},
+                {"key": "24", "value": "其他"}
+            ]
+        },
+        {
+            "title":"四大名著",
+            "url": "https://www.txshuku.com/sort${key}/0/${page}.html",
+            "page": 1,
+            "size": 30,
+            "categories": [
+                {"key": "1", "value": "三国系列"}, {"key": "2", "value": "水浒系列"},
+                {"key": "3", "value": "西游系列"}, {"key": "4", "value": "红楼系列"}
+            ]
+        },
+        {
+            "title":"诗词典籍",
+            "url": "https://www.txshuku.com/sort${key}/0/${page}.html",
+            "page": 1,
+            "size": 30,
+            "categories": [
+                {"key": "8", "value": "典籍文献"}, {"key": "6", "value": "诗词歌赋"},
+                {"key": "30", "value": "佛教书籍"}, {"key": "32", "value": "道教书籍"},
+                {"key": "31", "value": "中医书籍"}, {"key": "9", "value": "十三经注疏"}
+            ]
+        },
+        {
+            "title":"文学名著",
+            "url": "https://www.txshuku.com/sort${key}/0/${page}.html",
+            "page": 1,
+            "size": 30,
+            "categories": [
+                {"key": "7", "value": "世界名著"}, {"key": "5", "value": "古典文学"},
+                {"key": "11", "value": "英语文学"}, {"key": "12", "value": "现代文学"},
+                {"key": "25", "value": "散文随笔"}
+            ]
+        },
+        {
+            "title":"儿童文学",
+            "url": "https://www.txshuku.com/sort10/0/${page}.html",
+            "page": 1,
+            "size": 30
+        },
+        {
+            "title":"人文历史",
+            "url": "https://www.txshuku.com/sort${key}/0/${page}.html",
+            "page": 1,
+            "size": 30,
+            "categories": [
+                {"key": "26", "value": "经管营销"}, {"key": "14", "value": "人文社科"},
+                {"key": "28", "value": "励志教育"}, {"key": "29", "value": "生活百科"},
+                {"key": "27", "value": "人物传记"}
+            ]
+        }
+    ]
+}

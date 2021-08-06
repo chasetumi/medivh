@@ -1,0 +1,32 @@
+{
+    "name": "万书网",
+    "url": "www.2xs7.com",
+    "version": 101,
+    "search": {
+        "url": "http://www.2xs7.com/search@post->searchtype=articlename&searchkey=${key}",
+		"charset": "gbk",
+        "list": "#nr",
+        "name": "td:nth-child(1) > a",
+        "author": "td:nth-child(3)",
+        "cover": "",
+        "detail": "td:nth-child(1) > a"
+    },
+    "detail": {
+        "name": "h1",
+        "author": ".p_author > a",
+        "cover": "#bookimg > img",
+        "summary": "#bookintro > p",
+        "status": "#count > .pd_r:nth-child(6)",
+        "update": "#keywords@replace->最后更新时间：->",
+        "lastChapter": "#newlist > ul > li:nth-child(1) > a",
+        "catalog": "strong > a"
+    },
+    "catalog": {
+        "list": "#readerlist > ul > li",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content"
+    }
+}

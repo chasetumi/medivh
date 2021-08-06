@@ -1,0 +1,75 @@
+{
+
+    "name": "书海阁",
+
+    "url": "www.shuhaige.com",
+
+    "version": 100,
+
+    "search": {
+
+        "url": "https://www.shuhaige.com/search.html@post->searchtype=all&searchkey=${key}",
+
+        "charset": "utf-8",
+
+        "list": "div.novelslist2 > ul > li:nth-child(n+2)",
+
+        "name": "span.s2 > a",
+
+        "cover":"",
+
+        "author": "span.s4",
+
+        "summary": "",
+
+        "detail":"span.s2 > a"
+
+        
+
+    },
+
+    "detail": {
+
+        "name":"div.xiaoshuo > h1",
+
+        "cover":"div.book_cover > img",
+
+        "author":"h6:nth-child(3) > a",
+
+        "status":"div.read_page > div.nowplace@match->(?<=（)(.+)(?=）)",
+
+        "summary":"#intro",
+
+        "update": "div.xiaoshuo > h5:nth-child(6)@match->(?<=更新时间：).+",
+
+        "lastChapter": "div.xiaoshuo > h5:nth-child(5) > a",
+
+        "catalog": ""
+
+        },
+
+    "catalog": {
+
+        "list": "dl:nth-child(2) > dd",
+
+        "orderBy":"0",
+
+        "name": "a",
+
+        "chapter": "a",
+
+        "page":""
+
+    },
+
+    "chapter": {
+
+        "content": ".content",
+
+        "page":"",
+
+        "purify": ["(?=因未知原因).+(?<=最新章节！)","(?=为了方便下次阅读).+",".+(?<=(www.shuhaige.com))"]
+
+    }
+
+}

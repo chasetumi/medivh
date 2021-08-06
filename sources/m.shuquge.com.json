@@ -1,0 +1,29 @@
+{
+    "name": "书趣阁",
+    "url": "m.shuquge.com",
+    "version": 101,
+    "search": {
+        "url": "http://m.shuquge.com/search.php@post->searchkey=${key}",
+        "charset": "utf-8",
+        "list": "div.bookbox",
+        "name": "div.bookinfo>h4 > i > a",
+        "author": "div.bookinfo>div.author@replace->作者：->",
+        "detail": "div.bookinfo>h4 > i > a@attr->href",
+        "cover": "div.bookimg>a>img@attr->src"
+    },
+    "detail": {
+        "name": "div.block_txt2 > h2 > a",
+        "author": "div.block > div.block_txt2 > p:nth-child(4)@replace->作者：->",
+        "cover": "body > div.cover > div.block > div.block_img2 > img@attr->src"
+    },
+    "catalog": {
+        "list": "div.cover > ul:nth-child(10)>li",
+        "name": "a",
+        "chapter": "a@attr->href@replace->_->\/@replace->m.shuquge->www.shuquge@replace->chapter->txt",
+        "page": "div.cover > div.listpage > span.right > a@attr->href"
+    },
+    "chapter": {
+        "content": "#content",
+        "purify": ["请记住本书首发域名：www.shuquge.com。书趣阁_笔趣阁手机版阅读网址：m.shuquge.com","http:\/\/www.shuquge.com\/txt\/[0-9]+\/[0-9]+.html"]
+    }
+}

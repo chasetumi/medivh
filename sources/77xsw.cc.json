@@ -1,0 +1,27 @@
+
+{
+    "name": "千千小说网",
+    "url": "77xsw.cc",
+    "remarks": "该网站30秒内只能搜索1次资源，分页拼接重复4个字",
+    "version": 101,
+    "search": {
+        "url": "https://www.77xsw.cc/modules/article/search.php?searchkey=${key}",
+        "charset": "gb2312",
+        "list": "h4",
+        "name": "a",
+        "detail": "a"
+    },
+    "detail": {
+        "name": ".breadcrumb > li.active"
+    },
+    "catalog": {
+        "list": "dd.col-md-3",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#htmlContent",
+        "filter": ["@div", "@a", "@p", "%... -->>|千千小说网.+最快更新|最新章节！"],
+        "page": "a#linkNext:matches(下一页)"
+    }
+}

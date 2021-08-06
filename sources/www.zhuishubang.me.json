@@ -1,0 +1,30 @@
+{
+    "name": "追书帮",
+    "url": "www.zhuishubang.me",
+    "version": 101,
+    "search": {
+        "url": "https://www.zhuishubang.me/modules/article/search.php@post->searchtype=articlename&searchkey=${key}",
+        "charset": "gbk",
+        "list": "#content > table > tbody > tr:nth-child(n+2)",
+        "name": "td:nth-child(1) > a",
+        "author": "td:nth-child(3)",
+        "detail":"td:nth-child(1) > a"
+    },
+    "detail": {
+        "name":"div.bookPhr > h2",
+        "cover":"div.bookImg > img",
+        "author":"dl > dd:nth-child(1)@match->(?<=作者：).+",
+        "update": "div.renew > span",
+        "lastChapter": "div.renew > a",
+        "summary":"div.introCon > p"
+        },
+    "catalog": {
+        "orderBy": 1,
+        "list": "div.chapterCon > ul > li",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#yellow > div.readerDiv > div.readerCon > div.articleCon > p:nth-child(2)"
+    }
+}

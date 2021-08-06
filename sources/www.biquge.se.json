@@ -1,0 +1,33 @@
+{
+    "name": "笔趣阁se",
+    "url": "www.biquge.se",
+    "version": 100,
+    "search": {
+        "url": "http://www.biquge.se/case.php?m=search@post->key=${key}",
+        "charset": "utf-8",
+        "list": "div.l > ul > li",
+        "name": ".s2",
+        "author": ".s4",
+        "cover": "",
+        "summary": "",
+        "detail": ".s2 > a"
+    },
+    "detail": {
+        "name": "meta[property=og:book_name]@attr->content",
+        "author": "meta[property=og:novel:author]@attr->content",
+        "cover": "meta[property=og:image]@attr->content",
+        "summary": "meta[property=og:description]@attr->content",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ""
+    },
+    "catalog": {
+        "list": "#list > dl > dd",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content"
+    }
+}

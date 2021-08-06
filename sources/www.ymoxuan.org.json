@@ -1,0 +1,29 @@
+{
+    "name": "衍墨轩",
+    "url": "www.ymoxuan.org",
+    "version": 101,
+    "search": {
+        "url": "http://www.ymoxuan.org/search.htm?keyword=${key}",
+        "charset": "UTF-8",
+        "list": ".lastest>ul>li",
+        "name": ".n2>a",
+        "author": ".a2>a",
+        "detail":".n2>a"
+    },
+    "detail": {
+        "cover":".cover>img",
+        "status": ".info>p:nth-child(3)>i:nth-child(3)",
+        "update": ".info>p:nth-child(4)",
+        "lastChapter": ".info>p:nth-child(5)",
+        "summary":".info>p:nth-child(7)",
+        "catalog":"footer>a"
+        },
+    "catalog": {
+        "list": ".mulu>li:nth-child(n+11)",
+        "name": "li>a",
+        "chapter": "li>a"
+    },
+    "chapter": {
+        "content": ".content"
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "name": "小说娃小说 [飞卢]",
+    "url": "www.xiaoshuowa.com",
+    "version": 102,
+    "search": {
+        "url": "https://www.xiaoshuowa.com/search.html@post->searchtype=all&searchkey=${key}",
+        "charset": "utf-8",
+        "list": "div#sitembox > dl",
+        "name": "h3",
+        "author": ".book_other > span:nth-child(1)",
+        "cover": "img",
+        "detail": "h3 > a"
+    },
+    "detail": {
+        "summary": "#intro > p:nth-child(1)",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ""
+    },
+    "catalog": {
+        "list": "#list > dl > dd:gt(12) > a",
+        "orderBy": 0,
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content",
+        "page": ".bottem2 > a:nth-child(4):matches(下一页)",
+        "purify": [
+            "第(.+)章(.+)",
+            "喜欢从大树开始的进化请大家收藏：\\(www.xiaoshuowa.com\\)(.+)小说娃小说网更新速度最快。"
+        ]
+    }
+}

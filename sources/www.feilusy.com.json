@@ -1,0 +1,51 @@
+{
+
+    "name": "飞卢书院",
+
+    "url": "www.feilusy.com",
+
+    "version": 100,
+
+    "search": {
+
+        "url": "https://www.feilusy.com/search.html@post->searchtype=all&searchkey=${key}",
+
+        "list": "dl",
+
+        "name": "h3",
+
+        "author": "dd > span:nth-child(1)",
+
+        "summary": ".book_des",
+
+        "detail": "h3 > a"
+
+    },
+
+    "detail": {
+
+        "status": "meta[property=og:novel:status]@attr->content",        
+
+        "update": "#info > p:nth-child(4)@match->(?<=最后更新：).+",
+
+        "lastChapter": "#info > p:nth-child(5)"
+
+    },
+
+    "catalog": {
+
+        "list": "#list > dl > dd:nth-child(n+14)",
+
+        "name": "a",
+
+        "chapter": "a"
+
+    },
+
+    "chapter": {
+
+        "content": "#content > p" 
+
+    }
+
+}

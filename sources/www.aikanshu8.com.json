@@ -1,0 +1,36 @@
+{
+    "name": "爱看书吧 [飞卢]",
+    "url": "www.aikanshu8.com",
+    "version": 104,
+    "search": {
+        "url": "https://www.aikanshu8.com/modules/article/search.php?searchkey=${key}",
+        "charset": "gbk",
+        "list": ".mySearch > ul",
+        "name": "li:nth-child(1) > a",
+        "author": "li:nth-child(3)@match->(?<=作者：)(.+)",
+        "detail": "li:nth-child(1) > a"
+    },
+    "detail": {
+        "name": "meta[property=og:novel:book_name]@attr->content",
+        "author": "meta[property=og:novel:author]@attr->content",
+        "cover": "meta[property=og:image]@attr->content",
+        "summary": "meta[property=og:description]@attr->content",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ""
+    },
+    "catalog": {
+        "list": "#list-chapterAll > dl > dd.col-md-3",
+        "orderBy": 0,
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#htmlContent",
+        "purify": [
+            "<div class=\"divimage\">",
+            "请一秒记住aikanshu8.com爱看书吧小说网，免费阅读首发最新章节UC浏览器阅读模式如果不显示图片章节。手指点击屏幕，呼出底部菜单，点击退出，退出阅读模式！"
+        ]
+    }
+}

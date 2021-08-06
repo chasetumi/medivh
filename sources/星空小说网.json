@@ -1,0 +1,32 @@
+{
+    "name": "星空小说网",
+    "url": "www.aixswx.com",
+    "version": 101,
+    "search": {
+        "url": "http://www.aixswx.com/search.php@post->key=${key}",
+		"charset": "utf-8",
+        "list": ".secd-rank-list",
+        "name": "dd > a",
+        "author": "dd > p:nth-child(2) > a:nth-child(1)",
+        "cover": "dt > a > img",
+        "detail": "dd > a"
+    },
+    "detail": {
+        "name": "meta[property=og:novel:book_name]@attr->content",
+        "author": "meta[property=og:novel:author]@attr->content",
+        "cover": "meta[property=og:image]@attr->content",
+        "summary": ".brief.fl > p.brief_text",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ".header>.tab>a:nth-child(2)"
+    },
+    "catalog": {
+        "list": "#chapter",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#txt>dd>p"
+    }
+}

@@ -1,0 +1,114 @@
+{
+    "name": "一百本书",
+    "url": "www.100ben.net",
+    "version": 100,
+    "search": {
+        "url": "https://www.100ben.net/plus/search.php?keyword=${key}",
+        "list": "dl.recommand > dd > ul > li",
+        "name": ".titles",
+        "author": ".author@replace->作者： ",
+        "cover": "img",
+        "summary": ".intro",
+        "detail": "h3 > a"
+    },
+    "detail": {
+        "name": ".book_info > h2",
+        "author": ".book_info > div:nth-child(3)@replace->作者：",
+        "cover": ".book_info > img",
+        "summary": ".intro",
+        "status": "完结",
+        "lastChapter": "#dir > dd:last-child",
+        "catalog": ""
+    },
+    "catalog": {
+        "list": "#dir > dd",
+        "orderBy": 0,
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content",
+        "filter": [
+            "@div.pre",
+            "@h2"
+        ]
+    },
+    "rank": [
+        {
+            "title": "一百本书",
+            "url": "https://www.100ben.net/"
+        },
+        {
+            "title": "世界名著",
+            "url": "https://www.100ben.net/shijiemingzhu/list_${page}.html",
+            "page": 1,
+            "size": 30
+        },
+        {
+            "title": "现代文学",
+            "url": "https://www.100ben.net/xiandaiwenxue/list_${page}.html",
+            "page": 1,
+            "size": 30
+        },
+        {
+            "title": "外国小说",
+            "url": "https://www.100ben.net/waiguoxiaoshuo/list_${page}.html",
+            "page": 1,
+            "size": 30
+        },
+        {
+            "title": "励志书籍",
+            "url": "https://www.100ben.net/lizhishuji/list_${page}.html",
+            "page": 1,
+            "size": 30
+        },
+        {
+            "title": "古典文学",
+            "url": "https://www.100ben.net/gudianwenxue/list_${page}.html",
+            "page": 1,
+            "size": 30
+        },
+        {
+            "title": "武侠小说",
+            "url": "https://www.100ben.net/wuxiaxiaoshuo/list_${page}.html",
+            "page": 1,
+            "size": 30
+        },
+        {
+            "title": "言情小说",
+            "url": "https://www.100ben.net/yanqingxiaoshuo/list_${page}.html",
+            "page": 1,
+            "size": 30
+        },
+        {
+            "title": "推理小说",
+            "url": "https://www.100ben.net/tuilixiaoshuo/list_${page}.html",
+            "page": 1,
+            "size": 30
+        },
+        {
+            "title": "人物传记",
+            "url": "https://www.100ben.net/renwuzhuanji/list_${page}.html",
+            "page": 1,
+            "size": 30
+        },
+        {
+            "title": "盗墓悬疑",
+            "url": "https://www.100ben.net/daomuxuanyi/list_${page}.html",
+            "page": 1,
+            "size": 30
+        },
+        {
+            "title": "玄幻穿越",
+            "url": "https://www.100ben.net/xuanhuanchuanyue/list_${page}.html",
+            "page": 1,
+            "size": 30
+        },
+        {
+            "title": "科普书籍",
+            "url": "https://www.100ben.net/kepushuji/list_${page}.html",
+            "page": 1,
+            "size": 30
+        }
+    ]
+}

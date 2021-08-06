@@ -1,0 +1,36 @@
+{
+    "name": "九桃小说",
+    "url": "9txs.com",
+    "version": 102,
+    "search": {
+        "url": "https://so.9txs.com/www/@post->searchkey=${key}",
+        "list": "ul.library > li",
+        "name": "a.bookname",
+        "author": "a.author",
+        "cover": "a.bookimg > img",
+        "detail": "a.bookname"
+    },
+    "detail": {
+        "name": "meta[property=og:novel:book_name]@attr->content",
+        "author": "meta[property=og:novel:author]@attr->content",
+        "cover": "meta[property=og:image]@attr->content",
+        "summary": "meta[property=og:description]@attr->content",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": "a.more"
+    },
+    "catalog": {
+        "list": "div.read > dl:gt(0)",
+        "booklet": {
+            "name": "b",
+            "list": "dd"
+        },
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content > p",
+        "purify": ["您可以在百度里搜索.+最新章节！"]
+    }
+}

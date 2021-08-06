@@ -1,0 +1,33 @@
+{
+    "name": "读书369[名著]",
+    "url": "www.dushu369.com",
+    "version": 100,
+    "search": {
+        "url": "http://www.dushu369.com/book/search.asp@post->Keyword=${key}&select=Article&Submit=%CB%D1%CB%F7&Field=Title",
+        "charset": "gb2312",
+        "list": ".listdlmid .a0",
+        "name": "a",
+        "author": "",
+        "cover": "",
+        "summary": "",
+        "detail": "a"
+    },
+    "detail": {
+        "name": "meta[property=og:book_name]@attr->content",
+        "author": "meta[property=og:novel:author]@attr->content",
+        "cover": "meta[property=og:image]@attr->content",
+        "summary": "meta[property=og:description]@attr->content",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ""
+    },
+    "catalog": {
+        "list": "tbody >tr>td",
+        "name": ".a0",
+        "chapter": ".a0"
+    },
+    "chapter": {
+        "content": ".content"
+    }
+}

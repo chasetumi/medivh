@@ -1,0 +1,29 @@
+{
+    "name": "乐文小说网lewen",
+    "url": "www.lewenxsw.com",
+    "version": 101,
+    "search": {
+        "url": "http://www.lewenxsw.com/modules/article/search.php@post->searchkey=${key}",
+        "charset": "UTF-8",
+        "list": "tbody > tr:nth-child(n+2)",
+        "name": "td:nth-child(2) > p > a",
+        "detail": "tr > td:nth-child(2) > p > a"
+    },
+    "detail": {
+        "cover": " div.info1 > img",
+        "author": "h3:nth-child(2) > a",
+        "update": "p:nth-child(2) > font",
+        "name": " div.info2 > h1",
+        "status": "div.info3 > p:nth-child(1)@match->(?<=写作状态：).+",
+        "lastChapter": " div.panel-body > p:nth-child(3) > a",
+        "summary": " div.info2 > div > p"
+    },
+    "catalog": {
+        "list": "div:nth-child(5)> div>div>div>ul>li",
+        "name": "li>a",
+        "chapter": "li>a"
+    },
+    "chapter": {
+        "content": "div.content-ext"
+    }
+}

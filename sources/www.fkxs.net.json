@@ -1,0 +1,26 @@
+{
+    "name": "疯狂小说",
+    "url": "www.fkxs.net",
+    "version": 101,
+    "search": {
+        "url": "http://www.fkxs.net/modules/article/search.php?searchkey=${key}",
+        "charset": "gbk",
+        "list": "tbody> tr[id=nr]",
+        "name": "td.odd>a",
+        "author": "td.odd:eq(2)",
+        "detail": "td.odd>a@attr->href"
+    },
+    "detail": {
+        "name": "meta[property=og:novel:book_name]@attr->content",
+        "author": "meta[property=og:novel:author]@attr->content",
+        "cover": "#fmimg > img@attr->src"
+    },
+    "catalog": {
+        "list": "div[id=list]>dl>dd",
+        "name": "a",
+        "chapter": "a@attr->href"
+    },
+    "chapter": {
+        "content": "#content"
+    }
+}

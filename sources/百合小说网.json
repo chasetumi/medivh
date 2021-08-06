@@ -1,0 +1,33 @@
+{
+    "name": "百合小说网",
+    "url": "m.baihexs.com",
+    "version": 101,
+    "search": {
+        "url": "https://m.baihexs.com/modules/article/waps.php@post->searchtype=articlename&submit=&searchkey=${key}",
+		"charset": "gbk",
+        "list": ".cover > p.line",
+        "name": "a:nth-child(2)",
+        "author": "",
+        "cover": "",
+        "detail": "a:nth-child(2)"
+    },
+    "detail": {
+        "name": "h2 > a",
+        "author": ".block_txt2 > p:nth-child(4)@replace->作者：->",
+        "cover": ".block_img2 > img",
+        "summary": ".intro_info",
+        "status": ".block_txt2 > p:nth-child(6)",
+        "update": ".block_txt2 > p:nth-child(7)@replace->更新：->",
+        "lastChapter": ".block_txt2 > p:nth-child(8) > a",
+        "catalog": "https://www.baihexs.com/0/${meta[property=og:book_id]@attr->content}/"
+    },
+    "catalog": {
+        "list": "#readerlist > ul > li",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content",
+        "purify": ["请牢记：百合小说网.+免费最快更新无防盗无防盗."]
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "name": "蜡笔小说网",
+    "url": "m.biquwo.net",
+    "version": 101,
+    "search": {
+        "url": "http://m.biquwo.net/SearchBook.php@post->keyword=${key}&t=1",
+		"charset": "utf-8",
+        "list": ".recommend>.hot_sale",
+        "name": "a>.title",
+        "author": "a>.author:nth-child(2)@match->(?<=作者：)(.+)",
+        "detail": "a"
+    },
+    "detail": {
+        "name": "meta[property=og:novel:book_name]@attr->content",
+        "author": "meta[property=og:novel:author]@attr->content",
+        "cover": "meta[property=og:image]@attr->content",
+        "summary": "p.review",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ".recommend>h2:nth-child(3)>a"
+    },
+    "catalog": {
+        "list": "#chapterlist>p:nth-child(n+2)",
+        "name": "a",
+        "chapter": "a@attr->href@replace->m.biquwo->www.biquwo"
+    },
+    "chapter": {
+        "content": "#content",
+        "filter": ["@div", "@script"]
+    }
+}

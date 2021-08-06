@@ -1,0 +1,29 @@
+{
+    "name": "梧桐中文台",
+    "url": "www.ztv.la",
+    "version": 100,
+    "search": {
+        "url": "http://www.ztv.la/search.htm?keyword=${key}",
+        "charset": "UTF-8",
+        "list": "ul>li",
+        "name": ".col-xs-3>a",
+        "author": "li:nth-child(n+2)>div:nth-child(4)",
+        "detail":".col-xs-3>a"
+    },
+    "detail": {
+        "cover":".col-xs-2>img@attr->src",
+        "status": ".list-group:nth-child(1)>li:nth-child(3)@match->(?=写作进度：).+",
+        "update": ".list-group:nth-child(1)>li:nth-child(4)@match->(?=更新时间：).+",
+        "lastChapter": ".list-group:nth-child(1)>li:nth-child(5)>a",
+        "summary":".panel-body>p:nth-child(2)@match->(.+)(?=[收起])",
+        "catalog":"ul.list-group:nth-child(3)>li:nth-child(7)>a"
+        },
+    "catalog": {
+        "list": "#chapters-list>li",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#txtContent"
+    }
+}

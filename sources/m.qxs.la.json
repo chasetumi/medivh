@@ -1,0 +1,25 @@
+{
+    "name": "全小说",
+    "url": "https://m.qxs.la",
+    "version": 105,
+    "search": {
+        "url": "https://m.qxs.la/s_${key}",
+        "charset": "UTF-8",
+        "list": ".list > ul > li",
+        "name": "span",
+        "author": "a@match->(?<=/)(.+)",
+        "detail": "a"
+            },
+    "detail": {
+        "catalog": ""
+            },
+    "catalog": {
+        "list": ".chapter:gt(1)",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content",
+            "filter": [""]
+    }   
+}

@@ -1,0 +1,130 @@
+{
+    "name": "官术网",
+    "url": "m.biyuwu.cc",
+    "version": 100,
+    "search": {
+        "url": "https://m.biyuwu.cc/search.php?q=${key}",
+        "charset": "UTF-8",
+        "list": ".result-item",
+        "name": "h3",
+        "author": ".result-game-item-info-tag:nth-child(1)@match->(?<=作者： )(.+)",
+        "cover": ".result-game-item-pic-link-img",
+        "summary": ".result-game-item-desc",
+        "detail": "a"
+    },
+    "detail": {
+        "name": "",
+        "author": "",
+        "cover": "",
+        "summary": "",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ""
+    },
+    "catalog": {
+        "list": ".chapter:nth-child(11) > li",
+        "page": ".right > a",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#nr1",
+        "purify": ["&"],
+        "filter": ["@p.readinline"],
+        "page": "#pb_next:matches(下一页)"
+    },
+    "rank": [
+        {
+            "title":"玄幻奇幻",
+            "url": "https://m.biyuwu.cc/class1-1.html",
+            "page": 1,
+            "size": 20,
+            "categories": [],
+            "list": ".bookbox",
+            "name": "h4",
+            "author": ".author@match->(?<=作者：)(.+)",
+            "cover": ".bookimg > a > img",
+            "summary": ".intro_line@match->(?<=简介： )(.+)",
+            "detail": "a"
+        },
+        {
+            "title":"武侠仙侠",
+            "url": "https://m.biyuwu.cc/class2-1.html",
+            "page": 1,
+            "size": 20,
+            "categories": [],
+            "list": ".bookbox",
+            "name": "h4",
+            "author": ".author@match->(?<=作者：)(.+)",
+            "cover": ".bookimg > a > img",
+            "summary": ".intro_line@match->(?<=简介： )(.+)",
+            "detail": "a"
+        },
+        {
+            "title":"都市言情",
+            "url": "https://m.biyuwu.cc/class3-1.html",
+            "page": 1,
+            "size": 20,
+            "categories": [],
+            "list": ".bookbox",
+            "name": "h4",
+            "author": ".author@match->(?<=作者：)(.+)",
+            "cover": ".bookimg > a > img",
+            "summary": ".intro_line@match->(?<=简介： )(.+)",
+            "detail": "a"
+        },
+        {
+            "title":"历史军事",
+            "url": "https://m.biyuwu.cc/class4-1.html",
+            "page": 1,
+            "size": 20,
+            "categories": [],
+            "list": ".bookbox",
+            "name": "h4",
+            "author": ".author@match->(?<=作者：)(.+)",
+            "cover": ".bookimg > a > img",
+            "summary": ".intro_line@match->(?<=简介： )(.+)",
+            "detail": "a"
+        },
+        {
+            "title":"网游竞技",
+            "url": "https://m.biyuwu.cc/class6-1.html",
+            "page": 1,
+            "size": 20,
+            "categories": [],
+            "list": ".bookbox",
+            "name": "h4",
+            "author": ".author@match->(?<=作者：)(.+)",
+            "cover": ".bookimg > a > img",
+            "summary": ".intro_line@match->(?<=简介： )(.+)",
+            "detail": "a"
+        },
+        {
+            "title":"科幻灵异",
+            "url": "https://m.biyuwu.cc/class5-1.html",
+            "page": 1,
+            "size": 20,
+            "categories": [],
+            "list": ".bookbox",
+            "name": "h4",
+            "author": ".author@match->(?<=作者：)(.+)",
+            "cover": ".bookimg > a > img",
+            "summary": ".intro_line@match->(?<=简介： )(.+)",
+            "detail": "a"
+        },
+        {
+            "title":"女频",
+            "url": "https://m.biyuwu.cc/class7-1.html",
+            "page": 1,
+            "size": 20,
+            "categories": [],
+            "list": ".bookbox",
+            "name": "h4",
+            "author": ".author@match->(?<=作者：)(.+)",
+            "cover": ".bookimg > a > img",
+            "summary": ".intro_line@match->(?<=简介： )(.+)",
+            "detail": "a"
+        }
+    ]
+}
