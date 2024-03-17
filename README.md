@@ -18,6 +18,8 @@
       - <https://cdn.jsdelivr.net/gh/Grisimo/medivh@master/repository.json>
    - 书源地址 2：
       - <https://mirror.ghproxy.com/https://raw.githubusercontent.com/Grisimo/medivh/master/repository.json>
+   - 书源地址 3：
+      - <https://github.codecho.cc/https://github.com/Grisimo/medivh/blob/master/repository.json>
 
 2. 打开厚墨 app，点击 **头像 > 书源 > 右上角的 + 号 > 网址导入 > 输入链接 > 验证 > 完成**。
 3. 回到首页，点击头像旁的搜索框搜索图书，将图书加入书架。
